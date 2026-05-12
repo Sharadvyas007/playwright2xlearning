@@ -82,6 +82,18 @@ const colors = ["red", "blue"];
 colors.push("green"); // allowed — mutating contents
 ```
 
+### Comparison Table — `var` vs `let` vs `const`
+
+| Feature | `var` | `let` | `const` |
+|---------|-------|-------|---------|
+| Scope | Function-scoped | Block-scoped `{}` | Block-scoped `{}` |
+| Redeclaration | Allowed | Not allowed | Not allowed |
+| Reassignment | Allowed | Allowed | Not allowed |
+| Initialization | Optional (default `undefined`) | Optional (default `undefined`) | Required at declaration |
+| Hoisting | Hoisted, initialized as `undefined` | Hoisted, not initialized (TDZ) | Hoisted, not initialized (TDZ) |
+| Temporal Dead Zone | No | Yes | Yes |
+| Browser global (`window`) | Yes (when declared globally) | No | No |
+
 ### Identifiers
 
 An **identifier** is the name given to a variable, function, class, or object property.
