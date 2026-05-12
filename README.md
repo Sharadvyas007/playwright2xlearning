@@ -88,9 +88,13 @@ An **identifier** is the name given to a variable, function, class, or object pr
 
 **Rules:**
 - Must start with a letter (`a-z`, `A-Z`), underscore (`_`), or dollar sign (`$`)
-- Subsequent characters can also include digits (`0-9`)
+- Subsequent characters can include digits (`0-9`)
 - Case-sensitive (`myVar` ≠ `myvar`)
-- Cannot use reserved **keywords** as identifiers
+- Cannot be a reserved keyword
+- No spaces or special characters allowed (except `_` and `$`)
+- Cannot start with a digit
+- Unicode letters are allowed (e.g., `ñ`, `é`, `汉字`)
+- No limit on length
 
 ```js
 var $ = 10;      // valid
