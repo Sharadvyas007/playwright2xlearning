@@ -1,1 +1,0 @@
-let, function, return, for, if, else, while, do, switch, case, break, continue, var, const, class, new, this, super, try, catch, finally, throw, typeof, instanceof, in, of, import, export, from, default, async, await, yield, delete, void, with, debugger
