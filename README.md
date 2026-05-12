@@ -7,15 +7,25 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 ```
 ├── .gitignore
 ├── README.md
+├── 12_let_people_love.js
+├── 13_const_explained.js
 ├── chapter_01_basics/
 │   ├── 01_basic.js          # First JavaScript code (console.log)
 │   ├── 02_JS.js             # Variable declaration and arithmetic (sum)
 │   ├── 03_Verify_Setup.js   # Verify Node.js environment (process.arch, process.version)
-│   ├── 04_HotCode.js        # Function definition and hot code reloading
-│   └── 05_JS_Basics.js      # JavaScript reserved keywords reference list
-└── chapter_02_Javascript_Concepts.js/
-    ├── 05_JS_Basics.js      # Variable declaration with var
-    └── 06_identifiers_rules.js  # Identifier naming rules ($, _, letters, numbers)
+│   └── 04_HotCode.js        # Function definition and hot code reloading
+├── chapter_02_Javascript_Concepts.js/
+│   └── 05_JS_Basics.js      # Variable declaration with var
+├── chapter_03_identifiers_rules.js/
+│   ├── 06_identifiers_rules.js  # Identifier naming rules ($, _, letters, numbers)
+│   ├── 07_identifiers_Part2.js  # Naming conventions (camelCase, snake_case, etc.)
+│   ├── 08_comments.js           # Comments in JavaScript
+│   ├── VS_Code_short_mac.md     # VS Code shortcuts for Mac
+│   └── VS_Code_short_windows.md # VS Code shortcuts for Windows
+└── chapter_04_Javascript_Concept.js/
+    ├── 09_var_let_const.js  # var, let, const examples
+    ├── 10_function.js       # Function examples
+    └── 11_var_explained.js  # var keyword deep dive
 ```
 
 ### Chapter 01 — Playwright Basics
@@ -28,16 +38,35 @@ Foundational setup and first JavaScript programs:
 | `02_JS.js` | `let` variables, basic arithmetic |
 | `03_Verify_Setup.js` | `process.arch`, `process.version` |
 | `04_HotCode.js` | Functions (`function` declaration, `return`) |
-| `05_JS_Basics.js` | Reserved keywords (`let`, `const`, `if`, `for`, etc.) |
 
-### Chapter 02 — JavaScript Concepts
-
-Deeper dive into JavaScript language features:
+### Chapter 02 — JavaScript Concepts (legacy)
 
 | File | Topics Covered |
 |------|----------------|
 | `05_JS_Basics.js` | `var` declaration, scope basics |
+
+### Chapter 03 — Identifiers & Naming Conventions
+
+| File | Topics Covered |
+|------|----------------|
 | `06_identifiers_rules.js` | Valid identifiers (`$`, `_`, letters, digits; case sensitivity) |
+| `07_identifiers_Part2.js` | Naming conventions — camelCase, snake_case, PascalCase, UPPER_CASE |
+| `08_comments.js` | Single-line and multi-line comments |
+
+### Chapter 04 — Variables & Functions
+
+| File | Topics Covered |
+|------|----------------|
+| `09_var_let_const.js` | Comparison of var, let, const declarations |
+| `10_function.js` | Function declarations and expressions |
+| `11_var_explained.js` | var keyword behavior and hoisting |
+
+### Root-level files
+
+| File | Topics Covered |
+|------|----------------|
+| `12_let_people_love.js` | let keyword examples |
+| `13_const_explained.js` | const keyword examples |
 
 ## JavaScript Concepts
 
