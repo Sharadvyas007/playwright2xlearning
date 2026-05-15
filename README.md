@@ -7,8 +7,6 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 ```
 ├── .gitignore
 ├── README.md
-├── 12_let_people_love.js
-├── 13_const_explained.js
 ├── chapter_01_basics/
 │   ├── 01_basic.js          # First JavaScript code (console.log)
 │   ├── 02_JS.js             # Variable declaration and arithmetic (sum)
@@ -22,10 +20,28 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 08_comments.js           # Comments in JavaScript
 │   ├── VS_Code_short_mac.md     # VS Code shortcuts for Mac
 │   └── VS_Code_short_windows.md # VS Code shortcuts for Windows
-└── chapter_04_Javascript_Concept.js/
-    ├── 09_var_let_const.js  # var, let, const examples
-    ├── 10_function.js       # Function examples
-    └── 11_var_explained.js  # var keyword deep dive
+├── chapter_04_Javascript_Concept.js/
+│   ├── 09_var_let_const.js    # var, let, const examples
+│   ├── 10_function.js         # Function examples
+│   ├── 11_var_explained.js    # var keyword deep dive
+│   ├── 12_let_people_love.js  # let keyword examples
+│   └── 13_const_explained.js  # const keyword examples
+└── Chapter_06_operators.js/
+    ├── 30_operators.js                       # Operators overview
+    ├── 31_Arithmetic_OP.js                   # Arithmetic operators
+    ├── 32­_Modulus_OP.js                     # Modulus operator
+    ├── 33_Expo_OP.js                         # Exponentiation operator
+    ├── 34_iq.JS                              # IQ / interview questions
+    ├── 35_Comparision_OP.js                  # Comparison operators
+    ├── 36_Comparison__Strict_loose.js        # Strict vs loose comparison
+    ├── 37_IQ__Loose_Strict.js                # IQ on loose vs strict
+    ├── 38_Confusing_Comparison.js            # Confusing comparison cases
+    ├── 39_Logical_OP.js                      # Logical operators
+    ├── 40_String_Con_OP.js                   # String concatenation
+    ├── 41_Ternary_OP.js                      # Ternary operator
+    ├── 42_Type_OP.js                         # typeof operator
+    ├── 43_Incre_Decre_OP.js                  # Increment / decrement
+    └── 44_Null_OP.js                         # Nullish coalescing
 ```
 
 ### Chapter 01 — Playwright Basics
@@ -60,13 +76,28 @@ Foundational setup and first JavaScript programs:
 | `09_var_let_const.js` | Comparison of var, let, const declarations |
 | `10_function.js` | Function declarations and expressions |
 | `11_var_explained.js` | var keyword behavior and hoisting |
+| `12_let_people_love.js` | let keyword examples |
+| `13_const_explained.js` | const keyword examples |
 
-### Root-level files
+### Chapter 06 — Operators
 
 | File | Topics Covered |
 |------|----------------|
-| `12_let_people_love.js` | let keyword examples |
-| `13_const_explained.js` | const keyword examples |
+| `30_operators.js` | Operators overview |
+| `31_Arithmetic_OP.js` | Arithmetic operators (`+`, `-`, `*`, `/`, `%`, `**`) |
+| `32­_Modulus_OP.js` | Modulus operator (`%`) |
+| `33_Expo_OP.js` | Exponentiation operator (`**`) |
+| `34_iq.JS` | Operator IQ / interview questions |
+| `35_Comparision_OP.js` | Comparison operators (`==`, `!=`, `>`, `<`, `>=`, `<=`) |
+| `36_Comparison__Strict_loose.js` | Strict (`===`) vs loose (`==`) equality |
+| `37_IQ__Loose_Strict.js` | IQ questions on loose vs strict equality |
+| `38_Confusing_Comparison.js` | Tricky comparison cases |
+| `39_Logical_OP.js` | Logical operators (`&&`, `\|\|`, `!`) |
+| `40_String_Con_OP.js` | String concatenation with `+` |
+| `41_Ternary_OP.js` | Ternary (conditional) operator (`? :`) |
+| `42_Type_OP.js` | `typeof` operator |
+| `43_Incre_Decre_OP.js` | Increment (`++`) and decrement (`--`) |
+| `44_Null_OP.js` | Nullish coalescing operator (`??`)
 
 ## JavaScript Concepts
 
