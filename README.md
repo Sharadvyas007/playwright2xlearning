@@ -29,7 +29,7 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 └── Chapter_06_operators.js/
     ├── 30_operators.js                       # Operators overview
     ├── 31_Arithmetic_OP.js                   # Arithmetic operators
-    ├── 32­_Modulus_OP.js                     # Modulus operator
+    ├── 32_Modulus_OP.js                      # Modulus operator
     ├── 33_Expo_OP.js                         # Exponentiation operator
     ├── 34_iq.JS                              # IQ / interview questions
     ├── 35_Comparision_OP.js                  # Comparison operators
@@ -44,60 +44,74 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
     └── 44_Null_OP.js                         # Nullish coalescing
 ```
 
-### Chapter 01 — Playwright Basics
+---
 
-Foundational setup and first JavaScript programs:
+## Chapter 01 — Playwright Basics
 
-| File | Topics Covered |
-|------|----------------|
-| `01_basic.js` | `console.log` — first program |
-| `02_JS.js` | `let` variables, basic arithmetic |
-| `03_Verify_Setup.js` | `process.arch`, `process.version` |
-| `04_HotCode.js` | Functions (`function` declaration, `return`) |
+Foundational setup and first JavaScript programs.
 
-### Chapter 02 — JavaScript Concepts (legacy)
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `01_basic.js` | `console.log` | The very first JavaScript program. Prints `"Hello, This is my first JavaScript code!"` to the console. |
+| `02_JS.js` | `let` variables, basic arithmetic | Declares two variables `x = 10` and `y = 20`, computes their sum, and logs the result using string concatenation. |
+| `03_Verify_Setup.js` | `process.arch`, `process.version` | Verifies the Node.js environment by logging the system architecture and Node.js version. |
+| `04_HotCode.js` | Functions (`function` declaration, `return`) | Defines an `add(a, b)` function, loops from 0 to 100 calling it, and logs the final result. Demonstrates function definitions and `for` loops. |
 
-| File | Topics Covered |
-|------|----------------|
-| `05_JS_Basics.js` | `var` declaration, scope basics |
+---
 
-### Chapter 03 — Identifiers & Naming Conventions
+## Chapter 02 — JavaScript Concepts (Legacy)
 
-| File | Topics Covered |
-|------|----------------|
-| `06_identifiers_rules.js` | Valid identifiers (`$`, `_`, letters, digits; case sensitivity) |
-| `07_identifiers_Part2.js` | Naming conventions — camelCase, snake_case, PascalCase, UPPER_CASE |
-| `08_comments.js` | Single-line and multi-line comments |
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `05_JS_Basics.js` | `var` declaration, scope basics | Simple `var` declaration (`var a = 15`) and console output. Entry point to understanding variable declarations. |
 
-### Chapter 04 — Variables & Functions
+---
 
-| File | Topics Covered |
-|------|----------------|
-| `09_var_let_const.js` | Comparison of var, let, const declarations |
-| `10_function.js` | Function declarations and expressions |
-| `11_var_explained.js` | var keyword behavior and hoisting |
-| `12_let_people_love.js` | let keyword examples |
-| `13_const_explained.js` | const keyword examples |
+## Chapter 03 — Identifiers & Naming Conventions
 
-### Chapter 06 — Operators
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `06_identifiers_rules.js` | Valid identifiers (`$`, `_`, letters, digits; case sensitivity) | Demonstrates valid and invalid identifier names: `$`, `_abc`, `abc123`, `Name` vs `name`, `sharad_pareek`, `sharad$pareek`. Shows that identifiers cannot start with a number and cannot contain spaces. |
+| `07_identifiers_Part2.js` | Naming conventions — camelCase, snake_case, PascalCase, UPPER_CASE | Practical examples of all major naming conventions: `firstName` (camelCase), `first_name` (snake_case), `Person` class (PascalCase), `MAX_LIMIT` (UPPER_CASE). Also includes `$count` and `_privateVar`. |
+| `08_comments.js` | Single-line and multi-line comments | Shows `//` single-line comments, `/* */` multi-line comments, and inline comments. Includes the VS Code duplicate line shortcut (`Ctrl + Shift + D`). |
+| `VS_Code_short_mac.md` | VS Code keyboard shortcuts for macOS | Comprehensive reference of 25+ VS Code shortcuts for Mac users including Command Palette, Quick Open, terminal, multi-cursor, formatting, and navigation. |
+| `VS_Code_short_windows.md` | VS Code keyboard shortcuts for Windows | Comprehensive reference of 25+ VS Code shortcuts for Windows users including Command Palette, Quick Open, terminal, multi-cursor, formatting, and navigation. |
 
-| File | Topics Covered |
-|------|----------------|
-| `30_operators.js` | Operators overview |
-| `31_Arithmetic_OP.js` | Arithmetic operators (`+`, `-`, `*`, `/`, `%`, `**`) |
-| `32­_Modulus_OP.js` | Modulus operator (`%`) |
-| `33_Expo_OP.js` | Exponentiation operator (`**`) |
-| `34_iq.JS` | Operator IQ / interview questions |
-| `35_Comparision_OP.js` | Comparison operators (`==`, `!=`, `>`, `<`, `>=`, `<=`) |
-| `36_Comparison__Strict_loose.js` | Strict (`===`) vs loose (`==`) equality |
-| `37_IQ__Loose_Strict.js` | IQ questions on loose vs strict equality |
-| `38_Confusing_Comparison.js` | Tricky comparison cases |
-| `39_Logical_OP.js` | Logical operators (`&&`, `\|\|`, `!`) |
-| `40_String_Con_OP.js` | String concatenation with `+` |
-| `41_Ternary_OP.js` | Ternary (conditional) operator (`? :`) |
-| `42_Type_OP.js` | `typeof` operator |
-| `43_Incre_Decre_OP.js` | Increment (`++`) and decrement (`--`) |
-| `44_Null_OP.js` | Nullish coalescing operator (`??`)
+---
+
+## Chapter 04 — Variables & Functions
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `09_var_let_const.js` | Comparison of var, let, const declarations | Side-by-side examples of `var`, `let`, and `const`. Demonstrates `var` re-declaration (`var browser` declared twice) and re-assignment. Shows the key differences between the three declaration types. |
+| `10_function.js` | Function declarations and expressions | Defines a `greet()` function that logs a greeting message, then calls it twice to demonstrate function invocation. |
+| `11_var_explained.js` | var keyword behavior and hoisting | Deep dive into `var` function-scoped behavior. Shows how `var` inside a function and inside an `if` block all refer to the same variable due to function scoping (not block scoping). |
+| `12_let_people_love.js` | let keyword examples | Demonstrates `let` block-scoping with a `retryCount` variable that increments, and a `testStatus` example where `executiontime` is scoped inside an `if` block. Includes the note: "let is loyal, var is variable/traitor". |
+| `13_const_explained.js` | const keyword examples | Shows `const BaseUrl` that cannot be reassigned. Demonstrates block scoping with `let name` inside a block and inside a function, showing how `let` creates new bindings in different scopes. |
+
+---
+
+## Chapter 06 — Operators
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `30_operators.js` | Operators overview | Placeholder file for operators overview (to be populated). |
+| `31_Arithmetic_OP.js` | Arithmetic operators (`+`, `-`, `*`, `/`) | Demonstrates basic arithmetic operations: addition, subtraction, multiplication, and division using variables `a = 5` and `b = 10`. |
+| `32_Modulus_OP.js` | Modulus operator (`%`) | Demonstrates the remainder/modulus operator which returns the remainder of a division operation. |
+| `33_Expo_OP.js` | Exponentiation operator (`**`) | Demonstrates the exponentiation operator for raising a number to a power (e.g., `2 ** 3 = 8`). |
+| `34_iq.JS` | Compound / assignment operators | Demonstrates compound assignment operators like `+=` with `x += 10` which is shorthand for `x = x + 10`. |
+| `35_Comparision_OP.js` | Comparison operators (`>`, `<`, `>=`, `<=`, `==`, `===`) | Explains comparison operators with examples. Includes the analogy: `==` is "loose comparison" (like sikh vs hindu) while `===` is "strict comparison" (like sikh vs sikh — checks language and living). Demonstrates relational comparisons and introduces logical OR concepts. |
+| `36_Comparison__Strict_loose.js` | Strict (`===`) vs loose (`==`) equality | Side-by-side comparison showing `42 == "42"` returns `true` (type coercion) while `42 === "42"` returns `false` (strict type + value check). |
+| `37_IQ__Loose_Strict.js` | IQ questions on loose vs strict equality | Tricky interview questions exploring JavaScript coercion edge cases: `"" == 0`, `0 == "0"`, `"" == "0"` (transitivity broken!), `0 == false`, `null == 0`, `null == undefined`, and `null === undefined`. |
+| `38_Confusing_Comparison.js` | Tricky comparison cases | Comprehensive collection of JavaScript's most confusing comparison behaviors: transitivity traps, boolean coercion surprises (`false == []`), null & undefined edge cases, array/object weirdness (`[] == ![]` is `true`), and NaN behavior (`NaN == NaN` is `false`). Concludes with best practice: always use `===`. |
+| `39_Logical_OP.js` | Logical operators (`&&`, `\|\|`, `!`) | Placeholder file for logical operators (to be populated). |
+| `40_String_Con_OP.js` | String concatenation with `+` | Placeholder file for string concatenation operator (to be populated). |
+| `41_Ternary_OP.js` | Ternary (conditional) operator (`? :`) | Placeholder file for ternary operator (to be populated). |
+| `42_Type_OP.js` | `typeof` operator | Placeholder file for typeof operator (to be populated). |
+| `43_Incre_Decre_OP.js` | Increment (`++`) and decrement (`--`) | Placeholder file for increment and decrement operators (to be populated). |
+| `44_Null_OP.js` | Nullish coalescing operator (`??`) | Demonstrates null comparisons: `null >= 0` and `null === 0`, showing how null behaves unexpectedly in comparisons due to type coercion rules. |
+
+---
 
 ## JavaScript Concepts
 
@@ -176,6 +190,15 @@ var userName = "Alice"; // valid
 // var let;       // invalid — 'let' is a keyword
 ```
 
+### Naming Conventions
+
+| Convention | Pattern | Use Case | Example |
+|------------|---------|----------|---------|
+| camelCase | `firstName` | Variables, functions | `let firstName = "Sharad"` |
+| snake_case | `first_name` | Variables (optional style) | `let first_name = "Sharad"` |
+| PascalCase | `Person` | Classes, constructors | `class Person {}` |
+| UPPER_CASE | `MAX_LIMIT` | Constants, magic values | `const API_KEY = "abc123"` |
+
 ### Keywords
 
 **Keywords** are reserved words in JavaScript that have special meaning to the language. They cannot be used as identifiers.
@@ -191,6 +214,68 @@ Common keywords include:
 | Object/this | `this`, `super`, `new`, `delete`, `typeof`, `instanceof` |
 | Async | `async`, `await`, `yield` |
 | Other | `debugger`, `void`, `with`, `default`, `in`, `of` |
+
+### Comments
+
+```js
+// This is a single-line comment
+
+/* This is a 
+   multi-line comment */
+
+let x = 10; // This is an inline comment
+```
+
+**VS Code Shortcut:** Duplicate line — `Ctrl + Shift + D` (Windows/Linux), `Shift + Option + ↑/↓` (Mac)
+
+---
+
+## Operators Quick Reference
+
+### Arithmetic Operators
+
+| Operator | Name | Example | Result |
+|----------|------|---------|--------|
+| `+` | Addition | `5 + 10` | `15` |
+| `-` | Subtraction | `5 - 10` | `-5` |
+| `*` | Multiplication | `5 * 10` | `50` |
+| `/` | Division | `5 / 10` | `0.5` |
+| `%` | Modulus (Remainder) | `10 % 3` | `1` |
+| `**` | Exponentiation | `2 ** 3` | `8` |
+
+### Comparison Operators
+
+| Operator | Name | Example | Result |
+|----------|------|---------|--------|
+| `==` | Loose equality | `42 == "42"` | `true` |
+| `===` | Strict equality | `42 === "42"` | `false` |
+| `!=` | Loose not equal | `5 != "5"` | `false` |
+| `!==` | Strict not equal | `5 !== "5"` | `true` |
+| `>` | Greater than | `5 > 3` | `true` |
+| `<` | Less than | `5 < 3` | `false` |
+| `>=` | Greater than or equal | `4 >= 4` | `true` |
+| `<=` | Less than or equal | `4 <= 3` | `false` |
+
+**Best Practice:** Always prefer `===` and `!==` to avoid unexpected type coercion.
+
+### Logical Operators
+
+| Operator | Name | Example |
+|----------|------|---------|
+| `&&` | AND | `true && false` → `false` |
+| `\|\|` | OR | `true \|\| false` → `true` |
+| `!` | NOT | `!true` → `false` |
+
+### Compound Assignment Operators
+
+| Operator | Equivalent | Example |
+|----------|-----------|---------|
+| `+=` | `x = x + y` | `x += 10` |
+| `-=` | `x = x - y` | `x -= 5` |
+| `*=` | `x = x * y` | `x *= 2` |
+| `/=` | `x = x / y` | `x /= 2` |
+
+---
 
 ## Getting Started
 
@@ -210,7 +295,32 @@ Common keywords include:
    npx playwright test
    ```
 
+---
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) v16 or later
 - npm (included with Node.js)
+
+---
+
+## VS Code Shortcuts
+
+See the dedicated shortcut reference files in `chapter_03_identifiers_rules.js/`:
+- `VS_Code_short_windows.md` — Windows/Linux shortcuts
+- `VS_Code_short_mac.md` — macOS shortcuts
+
+Common essentials:
+
+| Action | Windows/Linux | Mac |
+|--------|---------------|-----|
+| Command Palette | `Ctrl+Shift+P` | `Cmd+Shift+P` |
+| Quick Open | `Ctrl+P` | `Cmd+P` |
+| Toggle Terminal | `` Ctrl+` `` | `` Ctrl+` `` |
+| Duplicate Line | `Ctrl+Shift+D` / `Shift+Alt+↑/↓` | `Shift+Option+↑/↓` |
+| Toggle Comment | `Ctrl+/` | `Cmd+/` |
+| Format Document | `Shift+Alt+F` | `Shift+Option+F` |
+
+---
+
+*Happy Learning! — Sharad Pareek*
