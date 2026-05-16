@@ -42,15 +42,6 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
         ├── 42_Type_OP.js                         # typeof operator
         ├── 43_Incre_Decre_OP.js                  # Increment / decrement
         └── 44_Null_OP.js                         # Nullish coalescing
-
-├── Playwright_Class_learning2x/              # Batch 2x Course Companion (NEW ADDON)
-│   ├── chapter_01_Basics/                    # Hello World, env setup, hot code
-│   ├── chapter_02_Javascript_Concepts/       # JS Basics
-│   ├── chapter_03_Identifier_Literals/       # Identifiers, literals & comments
-│   ├── chapter_04_Javascript_Concepts/       # var / let / const, hoisting & TDZ
-│   ├── chapter_05_Literal/                   # Literals — null, numbers, strings, template
-│   ├── chapter_06_Operator/                  # Operators — arithmetic, comparison, logical
-│   └── README.md                             # Detailed course README with mermaid diagrams
 ```
 
 ---
@@ -119,33 +110,6 @@ Foundational setup and first JavaScript programs.
 | `42_Type_OP.js` | `typeof` operator | Placeholder file for typeof operator (to be populated). |
 | `43_Incre_Decre_OP.js` | Increment (`++`) and decrement (`--`) | Placeholder file for increment and decrement operators (to be populated). |
 | `44_Null_OP.js` | Nullish coalescing operator (`??`) | Demonstrates null comparisons: `null >= 0` and `null === 0`, showing how null behaves unexpectedly in comparisons due to type coercion rules. |
-
----
-
-## Playwright Class Learning 2x — New Addon
-
-A comprehensive **Batch 2x course companion** has been added under `Playwright_Class_learning2x/`. This addon includes a fully reorganized curriculum with in-depth explanations, mermaid diagrams, interview Q&A, and extended coverage of JavaScript fundamentals through Chapter 6.
-
-### What's Inside the Addon
-
-| Folder | Chapters | Status |
-|--------|----------|--------|
-| `chapter_01_Basics/` | 1–4 | Environment setup, first programs, hot code paths |
-| `chapter_02_Javascript_Concepts/` | 5 | Variables & console output |
-| `chapter_03_Identifier_Literals/` | 6–8 | Identifier rules, naming conventions, comments, VS Code shortcuts |
-| `chapter_04_Javascript_Concepts/` | 9–21 | var / let / const, function scope, block scope, hoisting, TDZ deep-dive, junior QA interview questions |
-| `chapter_05_Literal/` | 22–29 | Literals, null vs undefined, number forms (binary, octal, hex, BigInt), strings, template literals |
-| `chapter_06_Operator/` | 30–44 | Arithmetic, modulus, exponentiation, compound assignment, comparison (loose vs strict), confusing comparisons, logical, string concatenation |
-
-### Key Features of the Addon
-
-- **Mermaid diagrams** for curriculum roadmap, learning flow, TDZ sequences, and mindmaps
-- **Interview Q&A sections** explaining *why* concepts work the way they do
-- **Playwright-relevant examples** (template literals for selectors, assertions, screenshot paths)
-- **Detailed weekly plan** covering JavaScript → TypeScript → Playwright → AI Agents & MCP
-- **Useful commands** reference for Node.js, TypeScript, and Playwright CLI
-
-For the full experience, see `Playwright_Class_learning2x/README.md`.
 
 ---
 
