@@ -26,22 +26,31 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 11_var_explained.js    # var keyword deep dive
 │   ├── 12_let_people_love.js  # let keyword examples
 │   └── 13_const_explained.js  # const keyword examples
-└── Chapter_06_operators.js/
-    ├── 30_operators.js                       # Operators overview
-    ├── 31_Arithmetic_OP.js                   # Arithmetic operators
-    ├── 32_Modulus_OP.js                      # Modulus operator
-    ├── 33_Expo_OP.js                         # Exponentiation operator
-    ├── 34_iq.JS                              # IQ / interview questions
-    ├── 35_Comparision_OP.js                  # Comparison operators
-    ├── 36_Comparison__Strict_loose.js        # Strict vs loose comparison
-    ├── 37_IQ__Loose_Strict.js                # IQ on loose vs strict
-    ├── 38_Confusing_Comparison.js            # Confusing comparison cases
-    ├── 39_Logical_OP.js                      # Logical operators
-    ├── 40_String_Con_OP.js                   # String concatenation
-    ├── 41_Ternary_OP.js                      # Ternary operator
-    ├── 42_Type_OP.js                         # typeof operator
-    ├── 43_Incre_Decre_OP.js                  # Increment / decrement
-    └── 44_Null_OP.js                         # Nullish coalescing
+    └── Chapter_06_operators.js/
+        ├── 30_operators.js                       # Operators overview
+        ├── 31_Arithmetic_OP.js                   # Arithmetic operators
+        ├── 32_Modulus_OP.js                      # Modulus operator
+        ├── 33_Expo_OP.js                         # Exponentiation operator
+        ├── 34_iq.JS                              # IQ / interview questions
+        ├── 35_Comparision_OP.js                  # Comparison operators
+        ├── 36_Comparison__Strict_loose.js        # Strict vs loose comparison
+        ├── 37_IQ__Loose_Strict.js                # IQ on loose vs strict
+        ├── 38_Confusing_Comparison.js            # Confusing comparison cases
+        ├── 39_Logical_OP.js                      # Logical operators
+        ├── 40_String_Con_OP.js                   # String concatenation
+        ├── 41_Ternary_OP.js                      # Ternary operator
+        ├── 42_Type_OP.js                         # typeof operator
+        ├── 43_Incre_Decre_OP.js                  # Increment / decrement
+        └── 44_Null_OP.js                         # Nullish coalescing
+
+├── Playwright_Class_learning2x/              # Batch 2x Course Companion (NEW ADDON)
+│   ├── chapter_01_Basics/                    # Hello World, env setup, hot code
+│   ├── chapter_02_Javascript_Concepts/       # JS Basics
+│   ├── chapter_03_Identifier_Literals/       # Identifiers, literals & comments
+│   ├── chapter_04_Javascript_Concepts/       # var / let / const, hoisting & TDZ
+│   ├── chapter_05_Literal/                   # Literals — null, numbers, strings, template
+│   ├── chapter_06_Operator/                  # Operators — arithmetic, comparison, logical
+│   └── README.md                             # Detailed course README with mermaid diagrams
 ```
 
 ---
@@ -110,6 +119,33 @@ Foundational setup and first JavaScript programs.
 | `42_Type_OP.js` | `typeof` operator | Placeholder file for typeof operator (to be populated). |
 | `43_Incre_Decre_OP.js` | Increment (`++`) and decrement (`--`) | Placeholder file for increment and decrement operators (to be populated). |
 | `44_Null_OP.js` | Nullish coalescing operator (`??`) | Demonstrates null comparisons: `null >= 0` and `null === 0`, showing how null behaves unexpectedly in comparisons due to type coercion rules. |
+
+---
+
+## Playwright Class Learning 2x — New Addon
+
+A comprehensive **Batch 2x course companion** has been added under `Playwright_Class_learning2x/`. This addon includes a fully reorganized curriculum with in-depth explanations, mermaid diagrams, interview Q&A, and extended coverage of JavaScript fundamentals through Chapter 6.
+
+### What's Inside the Addon
+
+| Folder | Chapters | Status |
+|--------|----------|--------|
+| `chapter_01_Basics/` | 1–4 | Environment setup, first programs, hot code paths |
+| `chapter_02_Javascript_Concepts/` | 5 | Variables & console output |
+| `chapter_03_Identifier_Literals/` | 6–8 | Identifier rules, naming conventions, comments, VS Code shortcuts |
+| `chapter_04_Javascript_Concepts/` | 9–21 | var / let / const, function scope, block scope, hoisting, TDZ deep-dive, junior QA interview questions |
+| `chapter_05_Literal/` | 22–29 | Literals, null vs undefined, number forms (binary, octal, hex, BigInt), strings, template literals |
+| `chapter_06_Operator/` | 30–44 | Arithmetic, modulus, exponentiation, compound assignment, comparison (loose vs strict), confusing comparisons, logical, string concatenation |
+
+### Key Features of the Addon
+
+- **Mermaid diagrams** for curriculum roadmap, learning flow, TDZ sequences, and mindmaps
+- **Interview Q&A sections** explaining *why* concepts work the way they do
+- **Playwright-relevant examples** (template literals for selectors, assertions, screenshot paths)
+- **Detailed weekly plan** covering JavaScript → TypeScript → Playwright → AI Agents & MCP
+- **Useful commands** reference for Node.js, TypeScript, and Playwright CLI
+
+For the full experience, see `Playwright_Class_learning2x/README.md`.
 
 ---
 

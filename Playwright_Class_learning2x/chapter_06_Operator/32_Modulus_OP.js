@@ -1,10 +1,3 @@
-// % = Modulus 
-//  // a%b -> it will return the reminder
-
-let results = 13 % 7;
-
-let results2 = 101 % 2;
-
 // % = Modulus
 // a%b -> it will return the remainder
 

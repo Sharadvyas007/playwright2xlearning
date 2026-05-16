@@ -4,8 +4,8 @@
 // console.log(42 == "45"); //value different
 
 
-console.log(5 === 5);
-console.log(5 === "5");
+// console.log(5 === 5);
+// console.log(5 === "5");
 
 // console.log(5 == 5);
 // console.log(5 == "5");
