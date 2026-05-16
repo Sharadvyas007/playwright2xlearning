@@ -106,9 +106,9 @@ Foundational setup and first JavaScript programs.
 | `38_Confusing_Comparison.js` | Tricky comparison cases | Comprehensive collection of JavaScript's most confusing comparison behaviors: transitivity traps, boolean coercion surprises (`false == []`), null & undefined edge cases, array/object weirdness (`[] == ![]` is `true`), and NaN behavior (`NaN == NaN` is `false`). Concludes with best practice: always use `===`. |
 | `39_Logical_OP.js` | Logical operators (`&&`, `\|\|`, `!`) | Placeholder file for logical operators (to be populated). |
 | `40_String_Con_OP.js` | String concatenation with `+` | Placeholder file for string concatenation operator (to be populated). |
-| `41_Ternary_OP.js` | Ternary (conditional) operator (`? :`) | Placeholder file for ternary operator (to be populated). |
-| `42_Type_OP.js` | `typeof` operator | Placeholder file for typeof operator (to be populated). |
-| `43_Incre_Decre_OP.js` | Increment (`++`) and decrement (`--`) | Placeholder file for increment and decrement operators (to be populated). |
+| `41_Ternary_OP.js` | Ternary (conditional) operator (`? :`) | Demonstrates the ternary operator syntax `condition ? true_value : false_value` with an `age >= 18 ? "Adult" : "Minor"` example. |
+| `42_Type_OP.js` | `typeof` and `instanceof` operators | Shows how `typeof` returns the type of a variable (string, number, boolean, undefined, object, function) and the known `typeof null === "object"` quirk. Includes `instanceof` for checking object types (e.g., `arr instanceof Array`). |
+| `43_Incre_Decre_OP.js` | Increment (`++`) and decrement (`--`) | Explains pre-increment (`++x`), post-increment (`x++`), pre-decrement (`--x`), and post-decrement (`x--`) with examples showing when the value changes relative to use. |
 | `44_Null_OP.js` | Nullish coalescing operator (`??`) | Demonstrates null comparisons: `null >= 0` and `null === 0`, showing how null behaves unexpectedly in comparisons due to type coercion rules. |
 
 ---
