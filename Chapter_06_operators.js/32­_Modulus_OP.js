@@ -19,3 +19,12 @@ console.log(37 % 2);
 console.log(36 % 2);
 
 //  n%2 == 1 - odd number, [ n%2 == 0 , even]
+
+let result = 13 % 7;
+console.log(result);
+
+
+console.log(101 % 3);
+console.log(100 % 3);
+console.log(37 % 3);
+console.log(36 % 3);
