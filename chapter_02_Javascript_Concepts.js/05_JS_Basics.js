@@ -1,2 +1,5 @@
-var a = 15
-console.log(a);
+var v = 10;
+console.log(v);
+
+v = 12;
+console.log(v); 

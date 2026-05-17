@@ -1,3 +1,11 @@
-console.log(process.arch);
+console.log(process.platform);
 
-console.log("Node.js version: ", process.version);
+// MAC - DARWIN
+// WINDOWS - WIN32
+// LINUX - LINUX
+
+console.log(process.arch);
+// x64
+// arm64
+
+console.log("Node Version:", process.version);

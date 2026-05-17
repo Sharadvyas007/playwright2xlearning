@@ -1,10 +1,37 @@
-// This is single line comment
-/* This is multi line comment
-    Author : Sharad Pareek
-    Date : 2024-06-15    
-*/
+// This is sinle comment this will be ignore 
+// this line will be not executed
 
 
-// var a = 10; // This is an inline comment
+/*
+ *  This is multi line
+ *  Author : Prrmmod Dutta
+ *  Date : 14-Feb-2026
+ */
 
-// command for duplicate line : Ctrl + Shift + D (Windows/Linux)
+/**
+ *  This is multi line
+ *  Author : Prrmmod Dutta
+ *  Date : 14-Feb-2026
+ **/
+
+// var g = 10;
+
+// this adjasdasdsa
+// this adjasdasdsa
+// this adjasdasdsa
+// this adjasdasdsa
+// this              adjasdasdsa
+// this adjasdasdsa
+// this adjasdasdsa
+//          this adjasdasdsa
+// this adjasdasdsa
+// this adjasdasdsa
+//           this adjasdasdsa
+// this adjasdasdsa
+// this         adjasdasdsa
+// this adjasdasdsa
+// this adjasdasdsa
+// this          adjasdasdsa
+// this adjasdasdsa
+
+var a = 10

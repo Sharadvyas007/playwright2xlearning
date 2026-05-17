@@ -1,10 +1,6 @@
-var a = 10;// Global SCOPE
-
-// var is function scoped
-
-
+var a = 10; // Global Scope
 console.log(a);
-
+// Defination of the function
 function printHello() {
     console.log("Hello TheTestingAcademy!");
     var a = 20; // Local Scope
@@ -13,11 +9,9 @@ function printHello() {
         var a = 30;
         console.log(a); // 30
     }
-
+    console.log("F ->", a);
 }
 
+console.log("G ->", a);
+
 printHello();
-
-var a = 50;
-
-// var == trump, flipper, dual faced, no trust worthy

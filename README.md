@@ -9,23 +9,40 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 ├── README.md
 ├── chapter_01_basics/
 │   ├── 01_basic.js          # First JavaScript code (console.log)
-│   ├── 02_JS.js             # Variable declaration and arithmetic (sum)
-│   ├── 03_Verify_Setup.js   # Verify Node.js environment (process.arch, process.version)
+│   ├── 02_JS.js             # Variable declaration, arithmetic, loops, and functions
+│   ├── 03_Verify_Setup.js   # Verify Node.js environment (process.platform, process.arch, process.version)
 │   └── 04_HotCode.js        # Function definition and hot code reloading
 ├── chapter_02_Javascript_Concepts.js/
-│   └── 05_JS_Basics.js      # Variable declaration with var
+│   └── 05_JS_Basics.js      # Variable declaration with var and reassignment
 ├── chapter_03_identifiers_rules.js/
-│   ├── 06_identifiers_rules.js  # Identifier naming rules ($, _, letters, numbers)
-│   ├── 07_identifiers_Part2.js  # Naming conventions (camelCase, snake_case, etc.)
-│   ├── 08_comments.js           # Comments in JavaScript
+│   ├── 06_identifiers_rules.js  # Identifier naming rules with valid/invalid examples
+│   ├── 07_identifiers_Part2.js  # Naming conventions — camelCase, snake_case, PascalCase, SCREAMING_SNAKE_CASE, Hungarian
+│   ├── 08_comments.js           # Single-line, multi-line, and JSDoc-style comments
 │   ├── VS_Code_short_mac.md     # VS Code shortcuts for Mac
 │   └── VS_Code_short_windows.md # VS Code shortcuts for Windows
 ├── chapter_04_Javascript_Concept.js/
-│   ├── 09_var_let_const.js    # var, let, const examples
-│   ├── 10_function.js         # Function examples
-│   ├── 11_var_explained.js    # var keyword deep dive
-│   ├── 12_let_people_love.js  # let keyword examples
-│   └── 13_const_explained.js  # const keyword examples
+│   ├── 09_var_let_const.js         # var, let, const comparison with loops and functions
+│   ├── 10_function.js              # Function examples
+│   ├── 11_var_explained.js         # var function-scoped behavior and hoisting
+│   ├── 12_let_people_love.js       # let block-scoping, TDZ, and reassignment
+│   ├── 13_const_explained.js       # const keyword and block scoping
+│   ├── 14_var_functionascope.js    # var function scope vs global scope demonstration
+│   ├── 15_let_scope.js             # let block scope vs function scope demonstration
+│   ├── 16_Hoisting.js              # var hoisting with undefined initialization
+│   ├── 17_Hoisting_fn.js           # Function-scoped var hoisting inside functions
+│   ├── 18_let_Hoisting.js          # let hoisting and Temporal Dead Zone (TDZ)
+│   ├── 19_let_Hoisting_block.js    # let block-level TDZ and shadowing
+│   ├── 20_let_const.js             # const hoisting and TDZ behavior
+│   └── 21_Jr_QA.js                 # Junior QA interview — const TDZ practical example
+├── Chapter_05_Literal/
+│   ├── 22_Literal.js                   # String, boolean, number, null, undefined literals with typeof
+│   ├── 23_null_undefined.js            # null vs undefined — definitions, comparisons, and use cases
+│   ├── 24_null.js                      # null, undefined, empty string, and zero comparisons
+│   ├── 25_Literal_All.js               # Integer literals — decimal, hex, octal, and exponential
+│   ├── 26_Literal_Number_All.js        # Complete number types — binary, octal, hex, float, BigInt, Infinity, NaN
+│   ├── 27_Strings.js                 # Single quotes, double quotes, and typeof strings
+│   ├── 28_Template_Literal.js          # Template literals with variable interpolation for Playwright
+│   └── 29_Backtick_single_double.js  # Single vs double quotes vs backticks — comparison and examples
     └── Chapter_06_operators.js/
         ├── 30_operators.js                       # Operators overview
         ├── 31_Arithmetic_OP.js                   # Arithmetic operators
@@ -53,8 +70,8 @@ Foundational setup and first JavaScript programs.
 | File | Topics Covered | Description |
 |------|----------------|-------------|
 | `01_basic.js` | `console.log` | The very first JavaScript program. Prints `"Hello, This is my first JavaScript code!"` to the console. |
-| `02_JS.js` | `let` variables, basic arithmetic | Declares two variables `x = 10` and `y = 20`, computes their sum, and logs the result using string concatenation. |
-| `03_Verify_Setup.js` | `process.arch`, `process.version` | Verifies the Node.js environment by logging the system architecture and Node.js version. |
+| `02_JS.js` | `let` variables, arithmetic, `for` loops, functions | Declares two variables `x = 10` and `y = 20`, computes their sum, and logs the result. Also includes a `for` loop from 0 to 100 calling a `print()` function to demonstrate loops and function invocation. |
+| `03_Verify_Setup.js` | `process.platform`, `process.arch`, `process.version` | Verifies the Node.js environment by logging the operating system platform (`darwin`/`win32`/`linux`), system architecture (`x64`/`arm64`), and Node.js version. |
 | `04_HotCode.js` | Functions (`function` declaration, `return`) | Defines an `add(a, b)` function, loops from 0 to 100 calling it, and logs the final result. Demonstrates function definitions and `for` loops. |
 
 ---
@@ -63,7 +80,7 @@ Foundational setup and first JavaScript programs.
 
 | File | Topics Covered | Description |
 |------|----------------|-------------|
-| `05_JS_Basics.js` | `var` declaration, scope basics | Simple `var` declaration (`var a = 15`) and console output. Entry point to understanding variable declarations. |
+| `05_JS_Basics.js` | `var` declaration and reassignment | Demonstrates `var` declaration (`var v = 10`), logging, and reassignment (`v = 12`). Entry point to understanding variable declarations and mutability. |
 
 ---
 
@@ -71,9 +88,9 @@ Foundational setup and first JavaScript programs.
 
 | File | Topics Covered | Description |
 |------|----------------|-------------|
-| `06_identifiers_rules.js` | Valid identifiers (`$`, `_`, letters, digits; case sensitivity) | Demonstrates valid and invalid identifier names: `$`, `_abc`, `abc123`, `Name` vs `name`, `sharad_pareek`, `sharad$pareek`. Shows that identifiers cannot start with a number and cannot contain spaces. |
-| `07_identifiers_Part2.js` | Naming conventions — camelCase, snake_case, PascalCase, UPPER_CASE | Practical examples of all major naming conventions: `firstName` (camelCase), `first_name` (snake_case), `Person` class (PascalCase), `MAX_LIMIT` (UPPER_CASE). Also includes `$count` and `_privateVar`. |
-| `08_comments.js` | Single-line and multi-line comments | Shows `//` single-line comments, `/* */` multi-line comments, and inline comments. Includes the VS Code duplicate line shortcut (`Ctrl + Shift + D`). |
+| `06_identifiers_rules.js` | Valid identifiers (`$`, `_`, letters, digits; case sensitivity) | Expanded examples of valid identifiers: `$`, `_a`, `ab123`, `Name` vs `name`, `pramod_dutta`, `pramod$dutta`, `pramodu1232`. Reinforces that identifiers cannot start with a number or contain spaces. |
+| `07_identifiers_Part2.js` | Naming conventions — camelCase, snake_case, PascalCase, SCREAMING_SNAKE_CASE, Hungarian | Practical examples of all major naming conventions: `firstName` (camelCase), `first_name` (snake_case), `UserProfile` (PascalCase), `MAX_SIZE` / `API_KEY` / `DATABASE_URL` (SCREAMING_SNAKE_CASE), and Hungarian notation (`strName`, `bActive`, `nCount`, `arrItems`). |
+| `08_comments.js` | Single-line, multi-line, and JSDoc-style comments | Shows `//` single-line comments, `/* */` multi-line comments, `/** */` JSDoc-style blocks, and inline comments. Includes multi-line comment alignment examples. |
 | `VS_Code_short_mac.md` | VS Code keyboard shortcuts for macOS | Comprehensive reference of 25+ VS Code shortcuts for Mac users including Command Palette, Quick Open, terminal, multi-cursor, formatting, and navigation. |
 | `VS_Code_short_windows.md` | VS Code keyboard shortcuts for Windows | Comprehensive reference of 25+ VS Code shortcuts for Windows users including Command Palette, Quick Open, terminal, multi-cursor, formatting, and navigation. |
 
@@ -83,11 +100,36 @@ Foundational setup and first JavaScript programs.
 
 | File | Topics Covered | Description |
 |------|----------------|-------------|
-| `09_var_let_const.js` | Comparison of var, let, const declarations | Side-by-side examples of `var`, `let`, and `const`. Demonstrates `var` re-declaration (`var browser` declared twice) and re-assignment. Shows the key differences between the three declaration types. |
+| `09_var_let_const.js` | Comparison of var, let, const declarations | Side-by-side examples of `var`, `let`, and `const`. Demonstrates `var` re-declaration (`var browser` declared twice) and re-assignment. Includes a `for` loop with `var` showing loop counter leakage, plus a `say()` function called multiple times. |
 | `10_function.js` | Function declarations and expressions | Defines a `greet()` function that logs a greeting message, then calls it twice to demonstrate function invocation. |
-| `11_var_explained.js` | var keyword behavior and hoisting | Deep dive into `var` function-scoped behavior. Shows how `var` inside a function and inside an `if` block all refer to the same variable due to function scoping (not block scoping). |
-| `12_let_people_love.js` | let keyword examples | Demonstrates `let` block-scoping with a `retryCount` variable that increments, and a `testStatus` example where `executiontime` is scoped inside an `if` block. Includes the note: "let is loyal, var is variable/traitor". |
-| `13_const_explained.js` | const keyword examples | Shows `const BaseUrl` that cannot be reassigned. Demonstrates block scoping with `let name` inside a block and inside a function, showing how `let` creates new bindings in different scopes. |
+| `11_var_explained.js` | var keyword behavior, hoisting, and re-declaration | Deep dive into `var` function-scoped behavior with global vs local scope. Shows how `var` inside a function and inside an `if` block all refer to the same variable. Demonstrates global `var` re-declaration (`var a = 50`). |
+| `12_let_people_love.js` | let block-scoping, TDZ, and reassignment | Demonstrates `let` block-scoping with `retryCount` incrementing, `testStatus` with `executionTime` scoped inside an `if` block (throws `ReferenceError` when accessed outside). Reinforces: "let is loyal, var is variable/traitor". |
+| `13_const_explained.js` | const keyword, block scoping, and naming conventions | Shows `const BASE_URL` that cannot be reassigned (throws `TypeError`). Demonstrates block scoping with `let name` inside a block and inside a function. Uses `SCREAMING_SNAKE_CASE` for constants. |
+| `14_var_functionascope.js` | var function scope vs global scope | Side-by-side demonstration of global `var a = 10` vs local `var a = 20` inside a function, and how `var` inside an `if` block mutates the function-scoped variable. Logs global vs function values separately. |
+| `15_let_scope.js` | let block scope vs function scope | Identical structure to `14_var_functionascope.js` but using `let`. Shows how `let` inside an `if` block creates a separate block-scoped binding that does not affect the function-scoped `let`. |
+| `16_Hoisting.js` | var hoisting with undefined initialization | Demonstrates how `var` declarations are hoisted to the top with value `undefined`. Shows the "behind the scenes" transformation the JS engine performs before execution. |
+| `17_Hoisting_fn.js` | Function-scoped var hoisting | Shows that `var` is hoisted to the top of the enclosing function scope, not the global scope. Demonstrates hoisting inside `getUserStatus()`. |
+| `18_let_Hoisting.js` | let hoisting and Temporal Dead Zone (TDZ) | Demonstrates that `let` is hoisted but remains in the Temporal Dead Zone until declaration, throwing `ReferenceError` if accessed early. Shows TDZ boundaries with a block-scoped example. |
+| `19_let_Hoisting_block.js` | let block-level TDZ and shadowing | Demonstrates how a block-scoped `let` creates its own TDZ and shadows the outer variable. Accessing the block variable before declaration throws `ReferenceError` — it does not fall back to the global. |
+| `20_let_const.js` | const hoisting and TDZ | Demonstrates that `const` is also hoisted but uninitialized, throwing `ReferenceError` when accessed before declaration. |
+| `21_Jr_QA.js` | Junior QA interview — const TDZ practical example | Practical example of accessing a `const` before its declaration inside an `if` block, simulating a common interview question about hoisting and TDZ. |
+
+---
+
+## Chapter 05 — Literals & Data Types
+
+Exploring JavaScript literals, data types, and string handling.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `22_Literal.js` | String, boolean, number, null, undefined literals | Introduces basic literals with `typeof` operator: string (`"pramod"`), boolean (`true`), number (`3.14`), null, and undefined. |
+| `23_null_undefined.js` | `null` vs `undefined` — definitions, comparisons, and use cases | Comprehensive guide: `undefined` (auto-set by JS when not assigned) vs `null` (developer-assigned empty value). Covers `==` vs `===`, `typeof` quirks (`typeof null === "object"`), and a `checkValue()` helper function. |
+| `24_null.js` | `null`, `undefined`, empty string, and zero | Practical comparison of "no value" states: `null`, uninitialized variable, `0`, and `""`. Demonstrates `typeof` behavior for each. |
+| `25_Literal_All.js` | Integer literals — decimal, hex, octal, exponential | Covers decimal (`42`), hexadecimal (`0xFF`), octal (`0o77`), and exponential notation (`1e6`, `1.5e-4`). |
+| `26_Literal_Number_All.js` | Complete number types in JavaScript | Exhaustive reference: binary (`0b1010`), octal (`0o52`), hexadecimal (`0x2A`), floats, exponential notation, numeric separators (`1_000_000`), BigInt (`123n`), `Infinity`, `NaN`, and `Number` properties (`MAX_VALUE`, `MAX_SAFE_INTEGER`, `EPSILON`). |
+| `27_Strings.js` | Single quotes, double quotes, and `typeof` | Shows that both single (`'Hello'`) and double (`"Hello"`) quotes create strings. Demonstrates `typeof` on single-character and multi-character strings. |
+| `28_Template_Literal.js` | Template literals with `${}` interpolation | Practical template literal examples for Playwright automation: dynamic API URLs (`api-${env}.tekion.com`), locators with variables (`[data-row="${rowIndex}"]`), log messages with status, and JSON payload construction. |
+| `29_Backtick_single_double.js` | Single vs double quotes vs backticks | Side-by-side comparison table showing that `''` and `""` are identical for plain text, while `` ` ` `` (backticks) support variable injection, multi-line strings, and expressions inside `${}`. |
 
 ---
 
@@ -98,7 +140,7 @@ Foundational setup and first JavaScript programs.
 | `30_operators.js` | Assignment operators (`=`) | Demonstrates the assignment operator which assigns the right-hand side value to the left-hand side variable. Shows re-assignment behavior (`x = 10; x = 11; x = 90`). |
 | `31_Arithmetic_OP.js` | Arithmetic operators (`+`, `-`, `*`, `/`) | Demonstrates basic arithmetic operations: addition, subtraction, multiplication, and division using variables `a = 5` and `b = 10`. |
 | `32_Modulus_OP.js` | Modulus operator (`%`) | Demonstrates the remainder/modulus operator which returns the remainder of a division operation. Includes even/odd detection logic (`n % 2 === 0` for even, `n % 2 === 1` for odd) and additional examples with division by 3. |
-| `33_Expo_OP.js` | Exponentiation operator (`**`) | Demonstrates the exponentiation operator for raising a number to a power (e.g., `2 ** 3 = 8`). Also includes introductory hoisting examples with `var` and `let` behavior. |
+| `33_Expo_OP.js` | Exponentiation operator (`**`) | Demonstrates the exponentiation operator for raising a number to a power (e.g., `2 ** 3 = 8`). |
 | `34_iq.JS` | Compound / assignment operators | Demonstrates compound assignment operators like `+=` with `x += 10` which is shorthand for `x = x + 10`. |
 | `35_Comparision_OP.js` | Comparison operators (`>`, `<`, `>=`, `<=`, `==`, `===`) | Explains comparison operators with examples. Includes the analogy: `==` is "loose comparison" (like sikh vs hindu) while `===` is "strict comparison" (like sikh vs sikh — checks language and living). Demonstrates relational comparisons and introduces logical OR concepts. |
 | `36_Comparison__Strict_loose.js` | Strict (`===`) vs loose (`==`) equality | Side-by-side comparison showing `42 == "42"` returns `true` (type coercion) while `42 === "42"` returns `false` (strict type + value check). |

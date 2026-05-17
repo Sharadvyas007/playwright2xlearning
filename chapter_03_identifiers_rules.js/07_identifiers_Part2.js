@@ -1,33 +1,39 @@
-// Different naming conventions in JavaScript
+var name = "Sharad";
 
-// camelCase (variables & functions)
 var firstName = "Sharad";
-var lastName = "Pareek";
-function getUserName() {
-    return firstName + " " + lastName;
-}
+var lastName = "Pareek"; // CamelCase
 
-// snake_case
-var first_name = "Sharad";
-var last_name = "Pareek";
+var first_name = "Amit"; // Snake Case
 
-// PascalCase (classes & constructors)
-class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-}
+// Naming Conventions (Cases)
+// ============================================
+// 1. camelCase (standard for JS variables and functions)
+let userName = "camelCase";
+let totalPrice = 99.99;
+let isLoggedIn = true;
 
-// UPPER_CASE (constants / magic values)
-var MAX_LIMIT = 100;
-var API_KEY = "abc123";
 
-// Mixed examples
-var $count = 0;
-var _privateVar = "hidden";
-var camelCaseWithDigits = "v2";
 
-console.log("camelCase:", firstName + " " + lastName);
-console.log("snake_case:", first_name + " " + last_name);
-console.log("UPPER_CASE:", MAX_LIMIT, API_KEY);
+// 2. PascalCase (standard for JS classes and constructors)
+let UserProfile = "PascalCase";
+let ShoppingCart = "class name style";
+
+
+
+// 3. snake_case (underscore separated)
+let user_name = "snake_case";
+let total_price = 49.99;
+let is_logged_in = false;
+
+
+// 4. SCREAMING_SNAKE_CASE (constants)
+const MAX_SIZE = 100;
+const API_KEY = "abc123";
+const DATABASE_URL = "localhost";
+
+
+// 5. Hungarian Notation (prefix with type - older style)
+let strName = "string prefix";
+let bActive = true;       // boolean
+let nCount = 5;           // number
+let arrItems = [];        // array
