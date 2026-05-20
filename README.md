@@ -7,19 +7,21 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 ```
 ├── .gitignore
 ├── README.md
+├── .vscode/
+│   └── launch.json              # VS Code: debug configuration for Node.js
 ├── chapter_01_basics/
-│   ├── 01_basic.js          # First JavaScript code (console.log)
-│   ├── 02_JS.js             # Variable declaration, arithmetic, loops, and functions
-│   ├── 03_Verify_Setup.js   # Verify Node.js environment (process.platform, process.arch, process.version)
-│   └── 04_HotCode.js        # Function definition and hot code reloading
+│   ├── 01_basic.js            # First JavaScript code (console.log)
+│   ├── 02_JS.js               # Variable declaration, arithmetic, loops, and functions
+│   ├── 03_Verify_Setup.js     # Verify Node.js environment (process.platform, process.arch, process.version)
+│   └── 04_HotCode.js          # Function definition and hot code reloading
 ├── chapter_02_Javascript_Concepts.js/
-│   └── 05_JS_Basics.js      # Variable declaration with var and reassignment
+│   └── 05_JS_Basics.js        # Variable declaration with var and reassignment
 ├── chapter_03_identifiers_rules.js/
-│   ├── 06_identifiers_rules.js  # Identifier naming rules with valid/invalid examples
-│   ├── 07_identifiers_Part2.js  # Naming conventions — camelCase, snake_case, PascalCase, SCREAMING_SNAKE_CASE, Hungarian
-│   ├── 08_comments.js           # Single-line, multi-line, and JSDoc-style comments
-│   ├── VS_Code_short_mac.md     # VS Code shortcuts for Mac
-│   └── VS_Code_short_windows.md # VS Code shortcuts for Windows
+│   ├── 06_identifiers_rules.js   # Identifier naming rules with valid/invalid examples
+│   ├── 07_identifiers_Part2.js   # Naming conventions — camelCase, snake_case, PascalCase, SCREAMING_SNAKE_CASE, Hungarian
+│   ├── 08_comments.js            # Single-line, multi-line, and JSDoc-style comments
+│   ├── VS_Code_short_mac.md      # VS Code: shortcuts for Mac
+│   └── VS_Code_short_windows.md  # VS Code: shortcuts for Windows
 ├── chapter_04_Javascript_Concept.js/
 │   ├── 09_var_let_const.js         # var, let, const comparison with loops and functions
 │   ├── 10_function.js              # Function examples
@@ -40,25 +42,55 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 24_null.js                      # null, undefined, empty string, and zero comparisons
 │   ├── 25_Literal_All.js               # Integer literals — decimal, hex, octal, and exponential
 │   ├── 26_Literal_Number_All.js        # Complete number types — binary, octal, hex, float, BigInt, Infinity, NaN
-│   ├── 27_Strings.js                 # Single quotes, double quotes, and typeof strings
+│   ├── 27_Strings.js                   # Single quotes, double quotes, and typeof strings
 │   ├── 28_Template_Literal.js          # Template literals with variable interpolation for Playwright
-│   └── 29_Backtick_single_double.js  # Single vs double quotes vs backticks — comparison and examples
-    └── Chapter_06_operators.js/
-        ├── 30_operators.js                       # Operators overview
-        ├── 31_Arithmetic_OP.js                   # Arithmetic operators
-        ├── 32_Modulus_OP.js                      # Modulus operator
-        ├── 33_Expo_OP.js                         # Exponentiation operator
-        ├── 34_iq.JS                              # IQ / interview questions
-        ├── 35_Comparision_OP.js                  # Comparison operators
-        ├── 36_Comparison__Strict_loose.js        # Strict vs loose comparison
-        ├── 37_IQ__Loose_Strict.js                # IQ on loose vs strict
-        ├── 38_Confusing_Comparison.js            # Confusing comparison cases
-        ├── 39_Logical_OP.js                      # Logical operators
-        ├── 40_String_Con_OP.js                   # String concatenation
-        ├── 41_Ternary_OP.js                      # Ternary operator
-        ├── 42_Type_OP.js                         # typeof operator
-        ├── 43_Incre_Decre_OP.js                  # Increment / decrement
-        └── 44_Null_OP.js                         # Nullish coalescing
+│   └── 29_Backtick_single_double.js    # Single vs double quotes vs backticks — comparison and examples
+├── Chapter_06_operators.js/
+│   ├── 30_operators.js                 # Operators overview
+│   ├── 31_Arithmetic_OP.js             # Arithmetic operators (+, -, *, /)
+│   ├── 32-_Modulus_OP.js               # Modulus operator (%) and even/odd logic
+│   ├── 33_Expo_OP.js                   # Exponentiation operator (**)
+│   ├── 34_iq.JS                        # Compound / assignment operators
+│   ├── 35_Comparision_OP.js            # Comparison operators (>, <, >=, <=, ==, ===)
+│   ├── 36_Comparison__Strict_loose.js  # Strict vs loose comparison
+│   ├── 37_IQ__Loose_Strict.js          # IQ questions on loose vs strict equality
+│   ├── 38_Confusing_Comparison.js      # Confusing comparison cases
+│   ├── 39_Logical_OP.js                # Logical operators (&&, ||, !)
+│   ├── 40_String_Con_OP.js             # String concatenation with +
+│   ├── 41_Ternary_OP.js                # Ternary (conditional) operator
+│   ├── 42_Type_OP.js                   # typeof and instanceof operators
+│   ├── 43_Incre_Decre_OP.js            # Increment (++) and decrement (--) operators
+│   ├── 44_Null_OP.js                   # Null comparisons and coercion behavior
+│   ├── 45_Post_Increment.js            # Post-increment behavior (assign then increase)
+│   ├── 46_IQ_INCREMENT_D.js            # IQ questions on increment and decrement
+│   └── 47_Advance_ID_.js               # Advanced increment/decrement expressions
+├── Chapter_07_IF_Else.js/
+│   ├── 48_IF_Else.js                   # Basic if-else statement
+│   ├── 49_If_elseif_else.js            # If-else if-else ladder (grade calculator)
+│   ├── 50_REAL_IF_ELSE.js              # Nested if-else with user roles (admin, editor, viewer)
+│   ├── 51_API_IF_Else.js               # API status code handling with if-else
+│   ├── 52_IQ_IF_ELSE.js                # Truthy and falsy values in conditions
+│   ├── 53_IF_ELSE_real.js              # Real-world login check with logical operators
+│   ├── 54_IQ.js                        # Single-line if without braces
+│   ├── 55_IE.js                        # Standalone single if statement
+│   ├── 56_IQ_EVEN_ODD.js               # Even / odd check using if-else
+│   ├── 57_Grade_Calc.js                # Grade calculator with range checks
+│   ├── 58_LEAP_YEAR.js                 # Leap year logic with modulo operators
+│   └── Practice_IF_ELSE.js             # Practice exercises — even/odd, grades, leap year
+├── Chapter_08_Switch_Statement.js/
+│   ├── 59_Switch.js                    # Basic switch statement with break
+│   ├── 60_No_Break.js                  # Switch without break — fall-through behavior
+│   ├── 61_Default.js                   # Switch with default case
+│   ├── 62_REAL_TIME_EXAMPLE.js         # API response code validation with switch
+│   ├── 63_Switch_Group.js              # Grouped case labels (browser engine families)
+│   ├── 64_IQ_Switch.js                 # IQ — missing break and fall-through
+│   ├── 65_IQ2.js                       # IQ — switch(true) with range expressions
+│   ├── 66_IQ3.js                       # IQ — duplicate case behavior
+│   └── 67_IQ4.js                       # IQ — type coercion in switch cases
+└── chapter_09_UserInput/
+    ├── 68_User_Input.js                # Browser prompt for user input
+    ├── 69_NODE_Readline.js             # Node.js readline module for CLI input
+    └── 70_Prompt_Sync.js               # prompt-sync package for synchronous CLI input
 ```
 
 ---
@@ -91,8 +123,8 @@ Foundational setup and first JavaScript programs.
 | `06_identifiers_rules.js` | Valid identifiers (`$`, `_`, letters, digits; case sensitivity) | Expanded examples of valid identifiers: `$`, `_a`, `ab123`, `Name` vs `name`, `pramod_dutta`, `pramod$dutta`, `pramodu1232`. Reinforces that identifiers cannot start with a number or contain spaces. |
 | `07_identifiers_Part2.js` | Naming conventions — camelCase, snake_case, PascalCase, SCREAMING_SNAKE_CASE, Hungarian | Practical examples of all major naming conventions: `firstName` (camelCase), `first_name` (snake_case), `UserProfile` (PascalCase), `MAX_SIZE` / `API_KEY` / `DATABASE_URL` (SCREAMING_SNAKE_CASE), and Hungarian notation (`strName`, `bActive`, `nCount`, `arrItems`). |
 | `08_comments.js` | Single-line, multi-line, and JSDoc-style comments | Shows `//` single-line comments, `/* */` multi-line comments, `/** */` JSDoc-style blocks, and inline comments. Includes multi-line comment alignment examples. |
-| `VS_Code_short_mac.md` | VS Code keyboard shortcuts for macOS | Comprehensive reference of 25+ VS Code shortcuts for Mac users including Command Palette, Quick Open, terminal, multi-cursor, formatting, and navigation. |
-| `VS_Code_short_windows.md` | VS Code keyboard shortcuts for Windows | Comprehensive reference of 25+ VS Code shortcuts for Windows users including Command Palette, Quick Open, terminal, multi-cursor, formatting, and navigation. |
+| `VS_Code_short_mac.md` | VS Code: keyboard shortcuts for macOS | Comprehensive reference of 25+ VS Code: shortcuts for Mac users including Command Palette, Quick Open, terminal, multi-cursor, formatting, and navigation. |
+| `VS_Code_short_windows.md` | VS Code: keyboard shortcuts for Windows | Comprehensive reference of 25+ VS Code: shortcuts for Windows users including Command Palette, Quick Open, terminal, multi-cursor, formatting, and navigation. |
 
 ---
 
@@ -139,10 +171,10 @@ Exploring JavaScript literals, data types, and string handling.
 |------|----------------|-------------|
 | `30_operators.js` | Assignment operators (`=`) | Demonstrates the assignment operator which assigns the right-hand side value to the left-hand side variable. Shows re-assignment behavior (`x = 10; x = 11; x = 90`). |
 | `31_Arithmetic_OP.js` | Arithmetic operators (`+`, `-`, `*`, `/`) | Demonstrates basic arithmetic operations: addition, subtraction, multiplication, and division using variables `a = 5` and `b = 10`. |
-| `32_Modulus_OP.js` | Modulus operator (`%`) | Demonstrates the remainder/modulus operator which returns the remainder of a division operation. Includes even/odd detection logic (`n % 2 === 0` for even, `n % 2 === 1` for odd) and additional examples with division by 3. |
+| `32-_Modulus_OP.js` | Modulus operator (`%`) | Demonstrates the remainder/modulus operator which returns the remainder of a division operation. Includes even/odd detection logic (`n % 2 === 0` for even, `n % 2 === 1` for odd) and additional examples with division by 3. |
 | `33_Expo_OP.js` | Exponentiation operator (`**`) | Demonstrates the exponentiation operator for raising a number to a power (e.g., `2 ** 3 = 8`). |
 | `34_iq.JS` | Compound / assignment operators | Demonstrates compound assignment operators like `+=` with `x += 10` which is shorthand for `x = x + 10`. |
-| `35_Comparision_OP.js` | Comparison operators (`>`, `<`, `>=`, `<=`, `==`, `===`) | Explains comparison operators with examples. Includes the analogy: `==` is "loose comparison" (like sikh vs hindu) while `===` is "strict comparison" (like sikh vs sikh — checks language and living). Demonstrates relational comparisons and introduces logical OR concepts. |
+| `35_Comparision_OP.js` | Comparison operators (`>`, `<`, `>=`, `<=`, `==`, `===`) | Explains comparison operators with examples. Includes the analogy: `==` is "loose comparison" while `===` is "strict comparison". Demonstrates relational comparisons and introduces logical OR concepts. |
 | `36_Comparison__Strict_loose.js` | Strict (`===`) vs loose (`==`) equality | Side-by-side comparison showing `42 == "42"` returns `true` (type coercion) while `42 === "42"` returns `false` (strict type + value check). |
 | `37_IQ__Loose_Strict.js` | IQ questions on loose vs strict equality | Tricky interview questions exploring JavaScript coercion edge cases: `"" == 0`, `0 == "0"`, `"" == "0"` (transitivity broken!), `0 == false`, `null == 0`, `null == undefined`, and `null === undefined`. |
 | `38_Confusing_Comparison.js` | Tricky comparison cases | Comprehensive collection of JavaScript's most confusing comparison behaviors: transitivity traps, boolean coercion surprises (`false == []`), null & undefined edge cases, array/object weirdness (`[] == ![]` is `true`), and NaN behavior (`NaN == NaN` is `false`). Concludes with best practice: always use `===`. |
@@ -151,7 +183,61 @@ Exploring JavaScript literals, data types, and string handling.
 | `41_Ternary_OP.js` | Ternary (conditional) operator (`? :`) | Demonstrates the ternary operator syntax with simple, nested, and multi-level examples: age check, temperature feelings, two-number max, three-number max, and a practical "go to Goa" decision. |
 | `42_Type_OP.js` | `typeof` and `instanceof` operators | Shows how `typeof` returns the type of a variable (string, number, boolean, undefined, object, function) and the known `typeof null === "object"` quirk. Includes a practical `if (typeof value === "number")` use case. |
 | `43_Incre_Decre_OP.js` | Increment (`++`) and decrement (`--`) | Explains pre-increment (`++x`), post-increment (`x++`), pre-decrement (`--x`), and post-decrement (`x--`) with examples. Also includes compound expression evaluations (`++a + a`, `a++ + ++a - --a + a-- + ++a`) to practice operator precedence. |
-| `44_Null_OP.js` | Nullish coalescing operator (`??`) | Demonstrates null comparisons: `null >= 0` and `null === 0`, showing how null behaves unexpectedly in comparisons due to type coercion rules. |
+| `44_Null_OP.js` | Nullish coalescing and null comparisons | Demonstrates null comparisons: `null >= 0` and `null === 0`, showing how null behaves unexpectedly in comparisons due to type coercion rules. |
+| `45_Post_Increment.js` | Post-increment behavior | Shows that post-increment (`a_post++`) assigns the current value first and then increments. Logs both the original and incremented values. |
+| `46_IQ_INCREMENT_D.js` | IQ questions on increment and decrement | Practice problems combining pre-increment, post-increment, and post-decrement on multiple variables to trace final values. |
+| `47_Advance_ID_.js` | Advanced increment/decrement expressions | Complex expression evaluations like `++a + ++a` to understand operator precedence and sequence of evaluation. |
+
+---
+
+## Chapter 07 — If-Else Statements
+
+Control flow using conditional if-else logic.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `48_IF_Else.js` | Basic if-else | Simple age check: if `age > 18`, print "You are allowed to vote!", else print "You are not allowed to vote!". |
+| `49_If_elseif_else.js` | If-else if-else ladder | Grade calculator based on score ranges: A (>=90), B (>=80), C (>=70), D (>=60), else Fail. |
+| `50_REAL_IF_ELSE.js` | Nested if-else with user roles | Real-world example of login + role-based access: checks `isLoggedIn`, then checks `userRole` (admin, editor, viewer, guest) with nested if-else. |
+| `51_API_IF_Else.js` | API status code handling | Simulates API response validation: if status is 200, API is fine; if 404, not found; else no match. |
+| `52_IQ_IF_ELSE.js` | Truthy and falsy values | Demonstrates which values are truthy (non-zero numbers, non-empty strings, objects, arrays) and which are falsy (`""`, `null`, `undefined`, `NaN`, `0`). |
+| `53_IF_ELSE_real.js` | Logical operators in conditions | Real-world login check combining `&&` and checking username, password, and account lock status. |
+| `54_IQ.js` | Single-line if without braces | Shows that a single statement after `if` does not require braces, but warns about readability risks. |
+| `55_IE.js` | Standalone single if | Demonstrates a single `if` block without an `else` — valid and commonly used for simple guards. |
+| `56_IQ_EVEN_ODD.js` | Even / odd check | Uses modulo operator inside if-else to determine if a number is even or odd. |
+| `57_Grade_Calc.js` | Grade calculator with range checks | More detailed grade calculator using combined range conditions (`marks >= 80 && marks <= 89`). |
+| `58_LEAP_YEAR.js` | Leap year logic | Implements leap year rules: divisible by 4 and not by 100, OR divisible by 400. Tests with multiple years. |
+| `Practice_IF_ELSE.js` | Practice exercises | Combined practice file covering even/odd check, student grade calculator, and leap year verification. |
+
+---
+
+## Chapter 08 — Switch Statements
+
+Control flow using switch-case constructs.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `59_Switch.js` | Basic switch with break | Day-of-week switch: case 1 = Monday, case 2 = Tuesday, etc. Includes variable declaration inside a case with `break`. |
+| `60_No_Break.js` | Fall-through behavior | Demonstrates what happens when `break` is omitted — all subsequent cases execute until a `break` or `default` is hit. |
+| `61_Default.js` | Switch with default case | Same day-of-week example but with `break` in every case and a `default` for invalid day values. |
+| `62_REAL_TIME_EXAMPLE.js` | API response code validation | Real-world switch for HTTP status codes: 200 = OK, 404 = Not Found, default = no match. |
+| `63_Switch_Group.js` | Grouped case labels | Groups browser engines under shared cases: Chrome/Edge/Brave/Opera → Chromium, Firefox → Mozilla, Safari → Apple. |
+| `64_IQ_Switch.js` | Missing break fall-through | IQ question: without `break`, starting from `"banana"` falls through to cherry, date, and default. |
+| `65_IQ2.js` | Switch with boolean expression | Uses `switch(true)` with relational expressions to evaluate score ranges — an alternative to if-else ladders. |
+| `66_IQ3.js` | Duplicate case behavior | Demonstrates that duplicate case values are allowed in syntax but only the first match executes. |
+| `67_IQ4.js` | Type coercion in switch | Shows that `switch` uses strict equality (`===`) internally, so `0` does not match `false` even though `0 == false` is `true`. |
+
+---
+
+## Chapter 09 — User Input
+
+Reading user input in JavaScript — browser and Node.js environments.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `68_User_Input.js` | Browser `prompt()` | Uses the browser's `prompt()` dialog to read a number, converts it with `Number()`, then checks even/odd with if-else. |
+| `69_NODE_Readline.js` | Node.js `readline` module | Demonstrates reading input from the command line using Node.js built-in `readline` module with `createInterface` and `question()`. |
+| `70_Prompt_Sync.js` | `prompt-sync` package | Uses the `prompt-sync` npm package for synchronous CLI input in Node.js, converting input to a number and checking even/odd. |
 
 ---
 
@@ -268,7 +354,7 @@ Common keywords include:
 let x = 10; // This is an inline comment
 ```
 
-**VS Code Shortcut:** Duplicate line — `Ctrl + Shift + D` (Windows/Linux), `Shift + Option + ↑/↓` (Mac)
+**VS Code: Shortcut:** Duplicate line — `Ctrl + Shift + D` (Windows/Linux), `Shift + Option + ↑/↓` (Mac)
 
 ---
 
@@ -319,6 +405,39 @@ let x = 10; // This is an inline comment
 
 ---
 
+## Control Flow Summary
+
+### If-Else
+
+```js
+if (condition) {
+    // code block
+} else if (anotherCondition) {
+    // another code block
+} else {
+    // fallback code block
+}
+```
+
+### Switch
+
+```js
+switch (expression) {
+    case value1:
+        // code
+        break;
+    case value2:
+        // code
+        break;
+    default:
+        // fallback
+}
+```
+
+**Tip:** Always use `break` unless you intentionally want fall-through behavior.
+
+---
+
 ## Getting Started
 
 1. **Install dependencies:**
@@ -332,7 +451,12 @@ let x = 10; // This is an inline comment
    node chapter_01_basics/01_basic.js
    ```
 
-3. **Run Playwright tests:**
+3. **Run with VS Code: debugger:**
+   - Open any `.js` file
+   - Press **F5** to launch with debugging
+   - Press **Ctrl + F5** to run without debugging
+
+4. **Run Playwright tests:**
    ```bash
    npx playwright test
    ```
@@ -346,7 +470,7 @@ let x = 10; // This is an inline comment
 
 ---
 
-## VS Code Shortcuts
+## VS Code: Shortcuts
 
 See the dedicated shortcut reference files in `chapter_03_identifiers_rules.js/`:
 - `VS_Code_short_windows.md` — Windows/Linux shortcuts

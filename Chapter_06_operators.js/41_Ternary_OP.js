@@ -23,7 +23,7 @@ console.log(result);
 // If condition is true → first value executes
 // If condition is false → second value executes
 
-let Temp = 10;
+let Temp = 20;
 let feel = (Temp >= 40 ? "Very Hot" :
   (Temp >= 30 ? "Hot" :
     (Temp >= 20 ? "Warm" :
@@ -43,18 +43,30 @@ console.log(max);
 
 //---------------------------------
 
-let a2 = 5;
-let b2 = 7;
-let c2 = 9;
+let a = 5;
+let b = 7;
+let c = 9;
 
-let max2 = (a2 > b2)
-  ? (a2 > c2 ? a2 : c2)
-  : (b2 > c2 ? b2 : c2);
+let max = (a > b)
+  ? (a > c ? a : c)
+  : (b > c ? b : c);
 
-console.log(max2);
+console.log(max);
 
 //-------------------------
 
-let age2 = 20;
-let is_sharad_will_go_to_goa = age2 > 18 ? "Yes, let go goa!" : "No you are minor, Not going";
+let age = 20;
+let is_sharad_will_go_to_goa = age > 18 ? "Yes, let go goa!" : "No you are minor, Not going";
 console.log("Sharad :", is_sharad_will_go_to_goa)
+
+//-------------------------
+
+let age = 26;
+let is_sharad_will_go_to_goa = age >= 26 ? "Yes, he will go" : "he will not go";
+console.log("Sharad :", is_sharad_will_go_to_goa);
+
+//-------------------------
+
+let age_sharad = 45;
+let is_sharad_drink = age_sharad > 18 ? (age_sharad > 26 ? "Drink" : "No Drink") : "NO GOA";
+console.log("Sharad can :", is_sharad_drink);
