@@ -273,6 +273,7 @@ Repeating code blocks using `for`, `while`, and `do...while` loops.
 | `80_IQ.js` | Do-while edge case | Demonstrates a `do...while` loop that executes once even though the condition becomes false immediately. |
 | `81_IQ.js` | `continue` statement | Shows how `continue` skips the current iteration when `i === 1` in a `for` loop. |
 | `82_IQ.js` | Do-while missing increment | Demonstrates a common bug where the increment is missing, causing an infinite loop. |
+| `Task_22nd_may.js` | Class task — triangle check & FizzBuzz | Combined practice file from 22nd May class: triangle type detection (equilateral, isosceles, scalene) and the classic FizzBuzz program using a `while` loop. |
 
 ---
 
