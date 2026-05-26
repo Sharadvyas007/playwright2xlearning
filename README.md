@@ -76,6 +76,8 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 56_IQ_EVEN_ODD.js               # Even / odd check using if-else
 │   ├── 57_Grade_Calc.js                # Grade calculator with range checks
 │   ├── 58_LEAP_YEAR.js                 # Leap year logic with modulo operators
+│   ├── 58_Task_20may.js                # Class task — even/odd, grades, leap year
+│   ├── Task_21_May.js                  # Class task — HTTP status, test verdict, bug severity, build health, login lockout
 │   └── Practice_IF_ELSE.js             # Practice exercises — even/odd, grades, leap year
 ├── Chapter_08_Switch_Statement.js/
 │   ├── 59_Switch.js                    # Basic switch statement with break
@@ -221,6 +223,7 @@ Control flow using conditional if-else logic.
 | `57_Grade_Calc.js` | Grade calculator with range checks | More detailed grade calculator using combined range conditions (`marks >= 80 && marks <= 89`). |
 | `58_LEAP_YEAR.js` | Leap year logic | Implements leap year rules: divisible by 4 and not by 100, OR divisible by 400. Tests with multiple years. |
 | `58_Task_20may.js` | Class task — even/odd, grades, leap year | Consolidated practice file from 20th May class covering even/odd check, grade calculator (A–F), and leap year verification. |
+| `Task_21_May.js` | Class task — real-world QA scenarios | Five practical exercises: HTTP status code categorizer, test case pass/fail verdict, bug severity classifier, build health reporter, and login lockout after failed attempts. |
 | `Practice_IF_ELSE.js` | Practice exercises | Combined practice file covering even/odd check, student grade calculator, and leap year verification. |
 
 ---

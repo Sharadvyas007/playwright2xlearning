@@ -16,6 +16,7 @@ This chapter covers the fundamentals and practical applications of `if`, `else i
 - [57_Grade_Calc.js](#57_grade_calcjs)
 - [58_LEAP_YEAR.js](#58_leap_yearjs)
 - [58_Task_20may.js](#58_task_20mayjs)
+- [Task_21_May.js](#task_21_mayjs)
 - [Practice_IF_ELSE.js](#practice_if_elsejs)
 
 ---
@@ -348,6 +349,114 @@ else {
 ```
 
 **Explanation:** This file contains three separate tasks: checking if 7 is even or odd, calculating the grade for a score of 79, and determining if the year 2000 is a leap year.
+
+---
+
+## Task_21_May.js
+
+**Description:** A class task from 21st May containing five practical QA-automation-focused exercises:
+1. **HTTP Status Code Categorizer** — classifies status codes into Success, Redirection, Client Error, Server Error, or Invalid.
+2. **Test Case Pass/Fail Verdict** — compares expected vs actual results and prints pass/fail with emojis.
+3. **Bug Severity Classifier** — maps a bug impact score (1–10) to severity levels: Critical, High, Medium, Low, or Invalid.
+4. **Build Health Reporter** — reports build health based on test pass percentage: Green Build, Stable, Unstable, or Broken Build.
+5. **Login Lockout After Failed Attempts** — simulates login attempt tracking and locks the account after 3 failed attempts.
+
+```javascript
+// Question 1 — HTTP Status Code Categorizer
+
+let statusCode = 299;
+
+if (statusCode >= 200 && statusCode <= 299) {
+    console.log("Success");
+}
+else if (statusCode >= 300 && statusCode <= 399) {
+    console.log("Redirection");
+}
+else if (statusCode >= 400 && statusCode <= 499) {
+    console.log("Client Error");
+}
+else if (statusCode >= 500 && statusCode <= 599) {
+    console.log("Server Error");
+}
+else {
+    console.log("Invalid");
+}
+
+// Question 2 — Test Case Pass/Fail Verdict
+
+let expected = "Login Successful";
+let actual1 = "Login Successful";
+let actual2 = "Invalid Credentials";
+
+if (expected === actual1) {
+    console.log(actual1, "✅ Test Passed");
+}
+else {
+    console.log(actual1, "❌ Test Failed");
+}
+
+if (expected === actual2) {
+    console.log(actual2, "✅ Test Passed");
+}
+else {
+    console.log(actual2, "❌ Test Failed");
+}
+
+// Question 3 — Bug Severity Classifier
+
+let bugCode = 2;
+
+if (bugCode >= 9 && bugCode <= 10) {
+    console.log("Severity: Critical (block release)");
+}
+else if (bugCode >= 7 && bugCode <= 8) {
+    console.log("Severity: High");
+}
+else if (bugCode >= 4 && bugCode <= 6) {
+    console.log("Severity: Medium");
+}
+else if (bugCode >= 1 && bugCode <= 3) {
+    console.log("Severity: Low");
+}
+else {
+    console.log("You have entered an Invalid score");
+}
+
+
+//Question 4 — Build Health Reporter
+
+let healthReport = 99;
+
+if (healthReport === 100) {
+    console.log("Green Build");
+}
+else if (healthReport >= 90 && healthReport <= 99) {
+    console.log("Stable (investigate failures)");
+}
+else if (healthReport >= 70 && healthReport <= 89) {
+    console.log("Unstable");
+}
+else {
+    console.log("Broken Build (block deployment)");
+}
+
+
+//Question 5 — Login Lockout After Failed Attempts
+
+let attempts = 3;
+
+if (attempts >= 3) {
+    console.log("🔒 Account Locked — Contact support")
+}
+else if (attempts >= 2) {
+    console.log("1 attempt left before lockout")
+}
+else {
+    console.log("Login successful")
+}
+```
+
+**Explanation:** This file bridges if-else concepts with real-world QA and DevOps scenarios. It demonstrates range checking, equality comparison, logical conditions, and multi-branch decision trees using practical examples a test automation engineer would encounter daily.
 
 ---
 
