@@ -1,4 +1,4 @@
-let day = 2;
+let day = 4;
 // 1 - mon, 2. - tue
 
 switch (day) {

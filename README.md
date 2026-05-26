@@ -87,10 +87,23 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 65_IQ2.js                       # IQ — switch(true) with range expressions
 │   ├── 66_IQ3.js                       # IQ — duplicate case behavior
 │   └── 67_IQ4.js                       # IQ — type coercion in switch cases
-└── chapter_09_UserInput/
-    ├── 68_User_Input.js                # Browser prompt for user input
-    ├── 69_NODE_Readline.js             # Node.js readline module for CLI input
-    └── 70_Prompt_Sync.js               # prompt-sync package for synchronous CLI input
+├── chapter_09_UserInput/
+│   ├── 68_User_Input.js                # Browser prompt for user input
+│   ├── 69_NODE_Readline.js             # Node.js readline module for CLI input
+│   └── 70_Prompt_Sync.js               # prompt-sync package for synchronous CLI input
+└── chapter_10_Loops/
+    ├── 71_For_loop.js                  # Introduction to repeating code
+    ├── 72_For_loop.js                  # Basic for loop examples
+    ├── 73_For_Loop2.js                 # For loop with different variables and ranges
+    ├── 74_IQ.js                        # For loop edge cases and IQ questions
+    ├── 75_For_OF_IN_EACH.js            # While loop basics
+    ├── 76_While.js                     # While loop examples
+    ├── 77_Do_While.js                  # Do-while loop with initial false condition
+    ├── 78_Do_While.js                  # Do-while retry example
+    ├── 79_IQ.js                        # While loop patterns and star pattern
+    ├── 80_IQ.js                        # Do-while edge case
+    ├── 81_IQ.js                        # Continue statement in for loop
+    └── 82_IQ.js                        # Do-while with missing increment
 ```
 
 ---
@@ -207,6 +220,7 @@ Control flow using conditional if-else logic.
 | `56_IQ_EVEN_ODD.js` | Even / odd check | Uses modulo operator inside if-else to determine if a number is even or odd. |
 | `57_Grade_Calc.js` | Grade calculator with range checks | More detailed grade calculator using combined range conditions (`marks >= 80 && marks <= 89`). |
 | `58_LEAP_YEAR.js` | Leap year logic | Implements leap year rules: divisible by 4 and not by 100, OR divisible by 400. Tests with multiple years. |
+| `58_Task_20may.js` | Class task — even/odd, grades, leap year | Consolidated practice file from 20th May class covering even/odd check, grade calculator (A–F), and leap year verification. |
 | `Practice_IF_ELSE.js` | Practice exercises | Combined practice file covering even/odd check, student grade calculator, and leap year verification. |
 
 ---
@@ -238,6 +252,27 @@ Reading user input in JavaScript — browser and Node.js environments.
 | `68_User_Input.js` | Browser `prompt()` | Uses the browser's `prompt()` dialog to read a number, converts it with `Number()`, then checks even/odd with if-else. |
 | `69_NODE_Readline.js` | Node.js `readline` module | Demonstrates reading input from the command line using Node.js built-in `readline` module with `createInterface` and `question()`. |
 | `70_Prompt_Sync.js` | `prompt-sync` package | Uses the `prompt-sync` npm package for synchronous CLI input in Node.js, converting input to a number and checking even/odd. |
+
+---
+
+## Chapter 10 — Loops
+
+Repeating code blocks using `for`, `while`, and `do...while` loops.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `71_For_loop.js` | Introduction to repetition | Shows manual `console.log` repetition versus using a loop to repeat a block of code. |
+| `72_For_loop.js` | Basic `for` loop | Demonstrates `for` loop syntax with initialization, condition, and increment expressions. Logs numbers from 0 to 5. |
+| `73_For_Loop2.js` | Loop variables and ranges | Uses custom variable names and ranges (`vedika` from 0 to 9, `_1` from 0 to 10) to show loop flexibility. |
+| `74_IQ.js` | For loop edge cases | IQ questions exploring loop conditions that never execute, infinite loops, and conditional logic inside loops. |
+| `75_For_OF_IN_EACH.js` | While loop introduction | Basic `while` loop that runs while a condition is true, with manual increment. |
+| `76_While.js` | `while` loop examples | Demonstrates `while` loops with initialization, condition, and update. Includes a practical example with 15 iterations. |
+| `77_Do_While.js` | `do...while` basics | Shows that `do...while` executes the block at least once even if the condition is initially false. |
+| `78_Do_While.js` | `do...while` retry pattern | Practical retry pattern using `do...while` — executes code then checks retry count. |
+| `79_IQ.js` | While loop patterns | Countdown `while` loop and nested `while` loops to print a star pyramid pattern. |
+| `80_IQ.js` | Do-while edge case | Demonstrates a `do...while` loop that executes once even though the condition becomes false immediately. |
+| `81_IQ.js` | `continue` statement | Shows how `continue` skips the current iteration when `i === 1` in a `for` loop. |
+| `82_IQ.js` | Do-while missing increment | Demonstrates a common bug where the increment is missing, causing an infinite loop. |
 
 ---
 
