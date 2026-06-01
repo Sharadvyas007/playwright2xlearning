@@ -54,7 +54,7 @@ else {
 // 1–3 → Low
 // Anything else → Invalid score
 
-let bugCode = 2;
+let bugCode = 5;
 
 if (bugCode >= 9 && bugCode <= 10) {
     console.log("Severity: Critical (block release)");

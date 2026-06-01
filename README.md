@@ -108,6 +108,43 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
     ├── 81_IQ.js                        # Continue statement in for loop
     ├── 82_IQ.js                        # Do-while with missing increment
     └── Task_22nd_may.js              # Class task — triangle check and FizzBuzz
+├── chapter_11_Arrays/
+│   ├── 83_Arrays.js                  # Array basics — empty arrays, indexed access, mixed types
+│   ├── 84_Arrays.js                  # Array creation — literal, constructor, Array.of, Array.from
+│   ├── 85_Access_Array.js            # Accessing & modifying elements, .at() with negative indices
+│   ├── 86_Arrays_Adding_Remove.js    # push, pop, unshift, shift — adding/removing from ends
+│   ├── 87_Adding_Remove2.js          # splice — insert, delete, replace elements in-place
+│   ├── 88_REAL_Example.js            # Real-world browser list manipulation with loops
+│   ├── 89_Searching.js               # indexOf, lastIndexOf, includes, find, findIndex, findLast
+│   ├── 90_Iterate.js                 # Iteration — for, for...of, forEach, for...in, entries()
+│   ├── 91_Transform_Arrays.js        # map, filter, reduce, flat — transform and aggregate arrays
+│   ├── 92_Arrays.js                  # sort — natural vs numeric sorting with compare functions
+│   ├── 93_Array_Slicing.js           # slice and splice — extracting and removing sub-arrays
+│   ├── 94_Concat_array.js            # concat, spread (...), join — combining and stringifying arrays
+│   └── 95_Array_Checking.js          # Array.isArray, every, some — validation and predicate checks
+└── chapter_12_Funtions/
+    ├── 96_Functions.js                 # Function definition and invocation basics
+    ├── 97_Type1_Fn_Basic_Functions.js  # Type 1 — no parameters, no return
+    ├── 98_Type2_Fn_With_Param_No_Return.js   # Type 2 — with parameters, no return
+    ├── 99_Type3_Fn_without_Param_Return_Type.js  # Type 3 — no parameters, with return
+    ├── 100_Type4_Fn_With_Param_With_Return.js   # Type 4 — with parameters and return
+    ├── 101_Template_literal.js         # Template literals inside functions (greet with ${})
+    ├── 102_Fn_Expression.js           # Function expressions vs function declarations
+    ├── 103_Arrow_Fn.js               # Arrow functions (ES6) — concise syntax, implicit return
+    ├── 104_Arrow_Fn_REAL.js          # Real-world arrow function — API status validation
+    ├── 105_IIFE.js                   # Immediately Invoked Function Expressions (IIFE)
+    ├── 106_Default_Param_Fn.js       # Default parameters in functions
+    ├── 107_IQ.js                     # IQ — function returning formatted strings
+    ├── 108_Rest_Param_Fn.js          # Rest parameters (...args)
+    ├── 109_IQ.js                     # IQ — multi-return function with HTTP status logic
+    ├── 110_Spead_IQ.js              # Spread operator with functions (...array)
+    ├── 111_Scope._Fn.js             # Function scope — global vs local variable access
+    ├── 112_IQ.js                    # IQ — nested scope and closure scope access
+    ├── 113_Closure.js               # Closure basics — inner function accessing outer variable
+    ├── 114_Closure.js               # Closure practical — makeCounter with increment/decrement/get
+    ├── 115_API_REAL_Closure.js      # Real-world closure — API retry tracker with attempt counter
+    ├── 116_Higher_Order_Fn.js       # Higher-order functions — passing functions as arguments
+    └── 117_Pure_Fn.js               # Pure vs impure functions — predictable output and side effects
 ```
 
 ---
@@ -277,6 +314,59 @@ Repeating code blocks using `for`, `while`, and `do...while` loops.
 | `81_IQ.js` | `continue` statement | Shows how `continue` skips the current iteration when `i === 1` in a `for` loop. |
 | `82_IQ.js` | Do-while missing increment | Demonstrates a common bug where the increment is missing, causing an infinite loop. |
 | `Task_22nd_may.js` | Class task — triangle check & FizzBuzz | Combined practice file from 22nd May class: triangle type detection (equilateral, isosceles, scalene) and the classic FizzBuzz program using a `while` loop. |
+
+---
+
+## Chapter 11 — Arrays
+
+Working with ordered collections in JavaScript — creation, access, mutation, searching, iteration, transformation, and validation.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `83_Arrays.js` | Array basics, `length`, index access | Introduces empty arrays, literal arrays with strings, numeric arrays, and accessing elements by index. Shows `undefined` for out-of-bounds access and mixed-type arrays. |
+| `84_Arrays.js` | Array creation methods | Covers array literal, `new Array(length)`, `new Array(elements...)`, `Array.of()`, and `Array.from(string)`. |
+| `85_Access_Array.js` | Index access, `.at()`, mutation | Demonstrates reading elements by positive index, `.at(-1)` for last element, and modifying elements by assignment. |
+| `86_Arrays_Adding_Remove.js` | `push`, `pop`, `unshift`, `shift` | Adds and removes elements from both ends of an array. Shows chaining multiple operations. |
+| `87_Adding_Remove2.js` | `splice` | In-place insertion, deletion, and replacement using `splice(start, deleteCount, ...items)`. |
+| `88_REAL_Example.js` | Real-world array manipulation | Manages a browser list: checks length, removes last/first elements, loops to find and log a specific browser. |
+| `89_Searching.js` | `indexOf`, `lastIndexOf`, `includes`, `find`, `findIndex` | Searching arrays by value or predicate. Includes `findLast` and `findLastIndex` for reverse search. |
+| `90_Iterate.js` | `for`, `for...of`, `forEach`, `for...in`, `entries()` | Five ways to iterate arrays with practical examples and index-vs-value distinction. |
+| `91_Transform_Arrays.js` | `map`, `filter`, `reduce`, `flat` | Transforms arrays: map to pass/fail grades, filter passing scores, reduce to sum, and flatten nested arrays. |
+| `92_Arrays.js` | `sort` | Natural (lexicographic) sorting vs numeric sorting using `(a, b) => a - b` for ascending/descending. |
+| `93_Array_Slicing.js` | `slice`, `splice` | Extracts sub-arrays with `slice(start, end)` and removes elements with `splice(start, deleteCount)`. |
+| `94_Concat_array.js` | `concat`, spread `...`, `join` | Combines arrays with `concat` and modern spread syntax. Joins array elements into a delimited string. |
+| `95_Array_Checking.js` | `Array.isArray`, `every`, `some` | Validates arrays and tests predicates across all or some elements. Includes a Playwright API status example. |
+
+---
+
+## Chapter 12 — Functions
+
+Deep dive into JavaScript functions — declarations, expressions, arrow functions, parameters, scope, closures, and functional patterns.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `96_Functions.js` | Function definition & call | Step-by-step introduction: define a function with `function`, then invoke it. |
+| `97_Type1_Fn_Basic_Functions.js` | Type 1 — no param, no return | Basic function that logs a message. Shows that calling a no-return function yields `undefined`. |
+| `98_Type2_Fn_With_Param_No_Return.js` | Type 2 — parameters, no return | Functions accepting arguments and logging results. Demonstrates parameter passing and `undefined` return. |
+| `99_Type3_Fn_without_Param_Return_Type.js` | Type 3 — no param, with return | Function that returns a value without taking any arguments. Captures return value into a variable. |
+| `100_Type4_Fn_With_Param_With_Return.js` | Type 4 — parameters + return | Classic parameterized function with `return`: `sumOfTwoNumner(a, b)` returns the computed sum. |
+| `101_Template_literal.js` | Template literals in functions | Returns a dynamic greeting string using backticks and `${}` interpolation. |
+| `102_Fn_Expression.js` | Function expressions | Assigns anonymous functions to variables. Compares function declarations vs function expressions side-by-side. |
+| `103_Arrow_Fn.js` | Arrow functions (ES6) | Converts normal functions to arrow functions. Covers implicit return, single-parameter shorthand, and zero-parameter syntax. |
+| `104_Arrow_Fn_REAL.js` | Real-world arrow function | Refactors an API status validator from normal function → expression → arrow function. |
+| `105_IIFE.js` | IIFE | Immediately Invoked Function Expressions — self-executing anonymous functions for isolated scopes. |
+| `106_Default_Param_Fn.js` | Default parameters | Sets default values for function parameters (`maxRetries = 3`, `delay = 1000`). |
+| `107_IQ.js` | IQ — formatted return | `runTest(name, status, duration)` returns a structured test result string. |
+| `108_Rest_Param_Fn.js` | Rest parameters | `...results` collects variable arguments into an array inside `logResult(suiteName, ...results)`. |
+| `109_IQ.js` | IQ — multi-return logic | `getStatus(code)` returns categorized HTTP status strings using early returns. |
+| `110_Spead_IQ.js` | Spread with functions | Spreads an array into individual arguments with `add(...num)`. Also shows rest + spread combined. |
+| `111_Scope._Fn.js` | Scope — global vs local | Demonstrates that local variables are accessible only inside their function, while global variables are accessible everywhere. |
+| `112_IQ.js` | IQ — nested scope | Inner functions can access outer variables, but outer cannot access inner variables. |
+| `113_Closure.js` | Closure basics | Inner function retains access to outer variable even after outer function completes. Returns the inner function. |
+| `114_Closure.js` | Closure practical | `makeCounter(start)` returns an object with `increment`, `decrement`, and `get` methods using closure. |
+| `115_API_REAL_Closure.js` | Real-world closure | `makeRetryTracker(max)` builds a retry tracker that keeps attempt count private via closure. |
+| `116_Higher_Order_Fn.js` | Higher-order functions | A function that accepts another function as an argument (`runWithLoggin(testFn, testName)`). |
+| `117_Pure_Fn.js` | Pure vs impure functions | Contrasts a pure function (predictable, no side effects) with an impure function (depends on external state). |
 
 ---
 
