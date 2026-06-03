@@ -390,7 +390,7 @@ Deep dive into JavaScript strings — literals, properties, searching, substring
 | `121_Substring.js` | `slice()`, `substring()`, `includes()` | Extracts substrings using `slice()` with positive and negative indices, `substring()`, and validates substrings with `includes()`. |
 | `122_Transform_Str.js` | `toUpperCase()`, `toLowerCase()`, `trim()`, `replace()`, `split()`, `join()` | Transforms strings: case conversion, whitespace trimming, single and global replacement, splitting into arrays, and joining arrays back into strings. |
 | `123_SC.js` | `replaceAll()`, regex replacement, `concat()`, template literals | Extended string transformations including `replaceAll()`, regex-based global replace, and three ways to concatenate strings: `+`, `concat()`, and template literals. |
-| `Task_3_June.js` | Reverse a string | Classic string reversal task using `split("")`, `reverse()`, and `join("")`. |
+| `Task_3_June.js` | Reverse a string, palindrome check | Classic string reversal using `split("")`, `reverse()`, and `join("")`. Also includes manual reversal with a `for` loop (no built-ins) and a palindrome check comparing the original and reversed strings. |
 
 ---
 
