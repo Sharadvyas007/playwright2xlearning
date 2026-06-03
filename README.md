@@ -122,29 +122,37 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 93_Array_Slicing.js           # slice and splice — extracting and removing sub-arrays
 │   ├── 94_Concat_array.js            # concat, spread (...), join — combining and stringifying arrays
 │   └── 95_Array_Checking.js          # Array.isArray, every, some — validation and predicate checks
-└── chapter_12_Funtions/
-    ├── 96_Functions.js                 # Function definition and invocation basics
-    ├── 97_Type1_Fn_Basic_Functions.js  # Type 1 — no parameters, no return
-    ├── 98_Type2_Fn_With_Param_No_Return.js   # Type 2 — with parameters, no return
-    ├── 99_Type3_Fn_without_Param_Return_Type.js  # Type 3 — no parameters, with return
-    ├── 100_Type4_Fn_With_Param_With_Return.js   # Type 4 — with parameters and return
-    ├── 101_Template_literal.js         # Template literals inside functions (greet with ${})
-    ├── 102_Fn_Expression.js           # Function expressions vs function declarations
-    ├── 103_Arrow_Fn.js               # Arrow functions (ES6) — concise syntax, implicit return
-    ├── 104_Arrow_Fn_REAL.js          # Real-world arrow function — API status validation
-    ├── 105_IIFE.js                   # Immediately Invoked Function Expressions (IIFE)
-    ├── 106_Default_Param_Fn.js       # Default parameters in functions
-    ├── 107_IQ.js                     # IQ — function returning formatted strings
-    ├── 108_Rest_Param_Fn.js          # Rest parameters (...args)
-    ├── 109_IQ.js                     # IQ — multi-return function with HTTP status logic
-    ├── 110_Spead_IQ.js              # Spread operator with functions (...array)
-    ├── 111_Scope._Fn.js             # Function scope — global vs local variable access
-    ├── 112_IQ.js                    # IQ — nested scope and closure scope access
-    ├── 113_Closure.js               # Closure basics — inner function accessing outer variable
-    ├── 114_Closure.js               # Closure practical — makeCounter with increment/decrement/get
-    ├── 115_API_REAL_Closure.js      # Real-world closure — API retry tracker with attempt counter
-    ├── 116_Higher_Order_Fn.js       # Higher-order functions — passing functions as arguments
-    └── 117_Pure_Fn.js               # Pure vs impure functions — predictable output and side effects
+├── chapter_12_Funtions/
+│   ├── 96_Functions.js                 # Function definition and invocation basics
+│   ├── 97_Type1_Fn_Basic_Functions.js  # Type 1 — no parameters, no return
+│   ├── 98_Type2_Fn_With_Param_No_Return.js   # Type 2 — with parameters, no return
+│   ├── 99_Type3_Fn_without_Param_Return_Type.js  # Type 3 — no parameters, with return
+│   ├── 100_Type4_Fn_With_Param_With_Return.js   # Type 4 — with parameters and return
+│   ├── 101_Template_literal.js         # Template literals inside functions (greet with ${})
+│   ├── 102_Fn_Expression.js           # Function expressions vs function declarations
+│   ├── 103_Arrow_Fn.js               # Arrow functions (ES6) — concise syntax, implicit return
+│   ├── 104_Arrow_Fn_REAL.js          # Real-world arrow function — API status validation
+│   ├── 105_IIFE.js                   # Immediately Invoked Function Expressions (IIFE)
+│   ├── 106_Default_Param_Fn.js       # Default parameters in functions
+│   ├── 107_IQ.js                     # IQ — function returning formatted strings
+│   ├── 108_Rest_Param_Fn.js          # Rest parameters (...args)
+│   ├── 109_IQ.js                     # IQ — multi-return function with HTTP status logic
+│   ├── 110_Spead_IQ.js              # Spread operator with functions (...array)
+│   ├── 111_Scope._Fn.js             # Function scope — global vs local variable access
+│   ├── 112_IQ.js                    # IQ — nested scope and closure scope access
+│   ├── 113_Closure.js               # Closure basics — inner function accessing outer variable
+│   ├── 114_Closure.js               # Closure practical — makeCounter with increment/decrement/get
+│   ├── 115_API_REAL_Closure.js      # Real-world closure — API retry tracker with attempt counter
+│   ├── 116_Higher_Order_Fn.js       # Higher-order functions — passing functions as arguments
+│   └── 117_Pure_Fn.js               # Pure vs impure functions — predictable output and side effects
+└── chapter_13_Strings/
+    ├── 118_Strings.js                  # String literals — single, double, backticks, multiline
+    ├── 119_String_Properties.js        # String properties — length, index access, charAt, charCodeAt
+    ├── 120_Search_Check_Str.js         # Searching & checking — includes, startsWith, endsWith, indexOf, search
+    ├── 121_Substring.js                # Substring extraction — slice, substring, includes
+    ├── 122_Transform_Str.js            # String transformation — toUpperCase, toLowerCase, trim, replace, split, join
+    ├── 123_SC.js                       # String transformation & concatenation — replaceAll, regex, concat
+    └── Task_3_June.js                  # Task — reverse a string using split, reverse, join
 ```
 
 ---
@@ -367,6 +375,22 @@ Deep dive into JavaScript functions — declarations, expressions, arrow functio
 | `115_API_REAL_Closure.js` | Real-world closure | `makeRetryTracker(max)` builds a retry tracker that keeps attempt count private via closure. |
 | `116_Higher_Order_Fn.js` | Higher-order functions | A function that accepts another function as an argument (`runWithLoggin(testFn, testName)`). |
 | `117_Pure_Fn.js` | Pure vs impure functions | Contrasts a pure function (predictable, no side effects) with an impure function (depends on external state). |
+
+---
+
+## Chapter 13 — Strings
+
+Deep dive into JavaScript strings — literals, properties, searching, substrings, transformations, and practical tasks.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `118_Strings.js` | String literals — single quotes, double quotes, backticks, multiline | Covers string creation with `''`, `""`, and `` ` ``. Demonstrates template literals with `${}` interpolation, multiline strings using backticks, and the `String()` constructor for coercion. |
+| `119_String_Properties.js` | `length`, index access, `charAt()`, `charCodeAt()` | Shows `str.length`, bracket index access (`str[0]`), `.at(-1)` for negative indexing, `charAt()`, and `charCodeAt()` to get character codes. |
+| `120_Search_Check_Str.js` | `includes()`, `startsWith()`, `endsWith()`, `indexOf()`, `search()` | Practical searching examples on a URL string. Demonstrates boolean checks and positional searches, plus an introduction to regular expressions with `search(/regex/)`. |
+| `121_Substring.js` | `slice()`, `substring()`, `includes()` | Extracts substrings using `slice()` with positive and negative indices, `substring()`, and validates substrings with `includes()`. |
+| `122_Transform_Str.js` | `toUpperCase()`, `toLowerCase()`, `trim()`, `replace()`, `split()`, `join()` | Transforms strings: case conversion, whitespace trimming, single and global replacement, splitting into arrays, and joining arrays back into strings. |
+| `123_SC.js` | `replaceAll()`, regex replacement, `concat()`, template literals | Extended string transformations including `replaceAll()`, regex-based global replace, and three ways to concatenate strings: `+`, `concat()`, and template literals. |
+| `Task_3_June.js` | Reverse a string | Classic string reversal task using `split("")`, `reverse()`, and `join("")`. |
 
 ---
 
