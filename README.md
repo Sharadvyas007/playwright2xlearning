@@ -120,9 +120,10 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 91_Transform_Arrays.js        # map, filter, reduce, flat — transform and aggregate arrays
 │   ├── 92_Arrays.js                  # sort — natural vs numeric sorting with compare functions
 │   ├── 93_Array_Slicing.js           # slice and splice — extracting and removing sub-arrays
-│   ├── 94_Concat_array.js            # concat, spread (...), join — combining and stringifying arrays
-│   └── 95_Array_Checking.js          # Array.isArray, every, some — validation and predicate checks
-├── chapter_12_Funtions/
+    │   ├── 94_Concat_array.js            # concat, spread (...), join — combining and stringifying arrays
+    │   ├── 95_Array_Checking.js          # Array.isArray, every, some — validation and predicate checks
+    │   └── Practice_arr.js               # Practice exercises — index search, length, even/odd count, sum, largest number
+    ├── chapter_12_Funtions/
 │   ├── 96_Functions.js                 # Function definition and invocation basics
 │   ├── 97_Type1_Fn_Basic_Functions.js  # Type 1 — no parameters, no return
 │   ├── 98_Type2_Fn_With_Param_No_Return.js   # Type 2 — with parameters, no return
@@ -152,7 +153,8 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
     ├── 121_Substring.js                # Substring extraction — slice, substring, includes
     ├── 122_Transform_Str.js            # String transformation — toUpperCase, toLowerCase, trim, replace, split, join
     ├── 123_SC.js                       # String transformation & concatenation — replaceAll, regex, concat
-    └── Task_3_June.js                  # Task — reverse a string using split, reverse, join
+    ├── Task_3_June.js                  # Task — reverse a string using split, reverse, join
+    └── Practice_str.js                 # Practice exercise — count vowels in a string
 ```
 
 ---
@@ -344,6 +346,7 @@ Working with ordered collections in JavaScript — creation, access, mutation, s
 | `93_Array_Slicing.js` | `slice`, `splice` | Extracts sub-arrays with `slice(start, end)` and removes elements with `splice(start, deleteCount)`. |
 | `94_Concat_array.js` | `concat`, spread `...`, `join` | Combines arrays with `concat` and modern spread syntax. Joins array elements into a delimited string. |
 | `95_Array_Checking.js` | `Array.isArray`, `every`, `some` | Validates arrays and tests predicates across all or some elements. Includes a Playwright API status example. |
+| `Practice_arr.js` | Array practice exercises | Covers `indexOf`, `length`, `at()`, `includes`, counting even/odd numbers, sum of elements, second-last element, and finding the largest number. |
 
 ---
 
@@ -391,6 +394,7 @@ Deep dive into JavaScript strings — literals, properties, searching, substring
 | `122_Transform_Str.js` | `toUpperCase()`, `toLowerCase()`, `trim()`, `replace()`, `split()`, `join()` | Transforms strings: case conversion, whitespace trimming, single and global replacement, splitting into arrays, and joining arrays back into strings. |
 | `123_SC.js` | `replaceAll()`, regex replacement, `concat()`, template literals | Extended string transformations including `replaceAll()`, regex-based global replace, and three ways to concatenate strings: `+`, `concat()`, and template literals. |
 | `Task_3_June.js` | Reverse a string, palindrome check | Classic string reversal using `split("")`, `reverse()`, and `join("")`. Also includes manual reversal with a `for` loop (no built-ins) and a palindrome check comparing the original and reversed strings. |
+| `Practice_str.js` | String practice exercise | Counts vowels in a given string using `includes()` and a loop. Demonstrates basic string iteration and conditional counting. |
 
 ---
 
