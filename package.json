@@ -1,0 +1,23 @@
+{
+  "name": "playwright_learning",
+  "version": "1.0.0",
+  "description": "A collection of Playwright and JavaScript concept exercises for learning end-to-end testing and core JavaScript fundamentals.",
+  "main": "chapter_02_Javascript_Concepts.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sharadvyas007/playwright2xlearning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sharadvyas007/playwright2xlearning/issues"
+  },
+  "homepage": "https://github.com/Sharadvyas007/playwright2xlearning#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.2"
+  }
+}

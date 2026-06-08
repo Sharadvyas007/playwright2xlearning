@@ -10,6 +10,14 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 ├── README.md
 ├── .vscode/
 │   └── launch.json              # VS Code: debug configuration for Node.js
+├── package.json
+├── package-lock.json
+├── playwright.config.js         # Playwright test configuration (browsers, reporters, workers)
+├── .github/
+│   └── workflows/
+│       └── playwright.yml       # GitHub Actions CI workflow for Playwright tests
+├── tests/
+│   └── example.spec.js          # Sample Playwright end-to-end tests
 ├── chapter_01_basics/
 │   ├── 01_basic.js            # First JavaScript code (console.log)
 │   ├── 02_JS.js               # Variable declaration, arithmetic, loops, and functions
@@ -79,7 +87,8 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 58_LEAP_YEAR.js                 # Leap year logic with modulo operators
 │   ├── 58_Task_20may.js                # Class task — even/odd, grades, leap year
 │   ├── Task_21_May.js                  # Class task — HTTP status, test verdict, bug severity, build health, login lockout
-│   └── Practice_IF_ELSE.js             # Practice exercises — even/odd, grades, leap year
+│   ├── Practice_IF_ELSE.js             # Practice exercises — even/odd, grades, leap year
+│   └── iF_else_Pratcie.js              # Extra practice — expected vs actual result, HTTP status categorization
 ├── Chapter_08_Switch_Statement.js/
 │   ├── 59_Switch.js                    # Basic switch statement with break
 │   ├── 60_No_Break.js                  # Switch without break — fall-through behavior
@@ -145,7 +154,8 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 114_Closure.js               # Closure practical — makeCounter with increment/decrement/get
 │   ├── 115_API_REAL_Closure.js      # Real-world closure — API retry tracker with attempt counter
 │   ├── 116_Higher_Order_Fn.js       # Higher-order functions — passing functions as arguments
-│   └── 117_Pure_Fn.js               # Pure vs impure functions — predictable output and side effects
+│   ├── 117_Pure_Fn.js               # Pure vs impure functions — predictable output and side effects
+│   └── fn_practices.js              # Extra practice — function types, return vs console.log, default parameters
 ├── chapter_13_Strings/
 │   ├── 118_Strings.js                  # String literals — single, double, backticks, multiline
 │   ├── 119_String_Properties.js        # String properties — length, index access, charAt, charCodeAt
@@ -294,6 +304,7 @@ Control flow using conditional if-else logic.
 | `58_Task_20may.js` | Class task — even/odd, grades, leap year | Consolidated practice file from 20th May class covering even/odd check, grade calculator (A–F), and leap year verification. |
 | `Task_21_May.js` | Class task — real-world QA scenarios | Five practical exercises: HTTP status code categorizer, test case pass/fail verdict, bug severity classifier, build health reporter, and login lockout after failed attempts. |
 | `Practice_IF_ELSE.js` | Practice exercises | Combined practice file covering even/odd check, student grade calculator, and leap year verification. |
+| `iF_else_Pratcie.js` | Expected vs actual results, status code checks | Compares `expactedResult` and `actualResult`, then categorizes HTTP status codes into client errors, server errors, and unknown results using if-else if-else. |
 
 ---
 
@@ -400,6 +411,7 @@ Deep dive into JavaScript functions — declarations, expressions, arrow functio
 | `115_API_REAL_Closure.js` | Real-world closure | `makeRetryTracker(max)` builds a retry tracker that keeps attempt count private via closure. |
 | `116_Higher_Order_Fn.js` | Higher-order functions | A function that accepts another function as an argument (`runWithLoggin(testFn, testName)`). |
 | `117_Pure_Fn.js` | Pure vs impure functions | Contrasts a pure function (predictable, no side effects) with an impure function (depends on external state). |
+| `fn_practices.js` | Function practice — all four types, return vs log | Covers basic function definitions, default parameters, returning values vs logging, and multiple invocations. Reinforces the difference between `return` and `console.log`. |
 
 ---
 
@@ -455,6 +467,56 @@ Working with two-dimensional arrays (matrices) in JavaScript — grid traversal,
 | `141_2d_Array_Fn.js` | 2D array functions | Uses `map` + `reduce` to compute row sums (student scores). Filters failed test cases from a suite results matrix using `includes`. |
 | `142_IQ_Right_Pattern_Py.js` | Right-angled triangle pattern | Classic nested-loop pattern: prints a right-angled triangle of stars with increasing row lengths. |
 | `8th_june_task.js` | Reverse pattern and pyramid | Class task from 8th June: reverse star triangle (decreasing row lengths) and a full pyramid with spaces and underscores. |
+
+---
+
+## Playwright Testing
+
+This repository now includes a full Playwright test setup for end-to-end browser automation.
+
+| File | Purpose |
+|------|---------|
+| `playwright.config.js` | Test configuration — runs on Chromium, Firefox, and WebKit with HTML reporting. |
+| `tests/example.spec.js` | Sample tests validating [playwright.dev](https://playwright.dev/) title and navigation. |
+| `package.json` | Project manifest with `@playwright/test` as a dev dependency. |
+
+### Running Tests Locally
+
+```bash
+# Install dependencies
+npm ci
+
+# Install Playwright browsers
+npx playwright install
+
+# Run all tests
+npx playwright test
+
+# Run tests with HTML report
+npx playwright test --reporter=html
+```
+
+### Test Configuration Highlights
+
+- **Parallel execution** — `fullyParallel: true`
+- **Retry on CI** — `retries: 2` when `CI` env variable is set
+- **Cross-browser** — Desktop Chrome, Firefox, and Safari
+- **Tracing** — Enabled on first retry for debugging
+
+---
+
+## CI / CD
+
+A GitHub Actions workflow (`.github/workflows/playwright.yml`) automatically runs the Playwright test suite on every push and pull request to `main` and `master`.
+
+| Step | Action |
+|------|--------|
+| Checkout code | `actions/checkout@v4` |
+| Setup Node.js LTS | `actions/setup-node@v4` |
+| Install dependencies | `npm ci` |
+| Install browsers | `npx playwright install --with-deps` |
+| Run tests | `npx playwright test` |
+| Upload report | `actions/upload-artifact@v4` (retained for 30 days) |
 
 ---
 
