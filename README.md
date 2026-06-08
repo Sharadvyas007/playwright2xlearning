@@ -120,10 +120,10 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 91_Transform_Arrays.js        # map, filter, reduce, flat — transform and aggregate arrays
 │   ├── 92_Arrays.js                  # sort — natural vs numeric sorting with compare functions
 │   ├── 93_Array_Slicing.js           # slice and splice — extracting and removing sub-arrays
-    │   ├── 94_Concat_array.js            # concat, spread (...), join — combining and stringifying arrays
-    │   ├── 95_Array_Checking.js          # Array.isArray, every, some — validation and predicate checks
-    │   └── Practice_arr.js               # Practice exercises — index search, length, even/odd count, sum, largest number
-    ├── chapter_12_Funtions/
+│   ├── 94_Concat_array.js            # concat, spread (...), join — combining and stringifying arrays
+│   ├── 95_Array_Checking.js          # Array.isArray, every, some — validation and predicate checks
+│   └── Practice_arr.js               # Practice exercises — index search, length, even/odd count, sum, largest number
+├── chapter_12_Funtions/
 │   ├── 96_Functions.js                 # Function definition and invocation basics
 │   ├── 97_Type1_Fn_Basic_Functions.js  # Type 1 — no parameters, no return
 │   ├── 98_Type2_Fn_With_Param_No_Return.js   # Type 2 — with parameters, no return
@@ -146,15 +146,37 @@ A collection of Playwright and JavaScript concept exercises for learning end-to-
 │   ├── 115_API_REAL_Closure.js      # Real-world closure — API retry tracker with attempt counter
 │   ├── 116_Higher_Order_Fn.js       # Higher-order functions — passing functions as arguments
 │   └── 117_Pure_Fn.js               # Pure vs impure functions — predictable output and side effects
-└── chapter_13_Strings/
-    ├── 118_Strings.js                  # String literals — single, double, backticks, multiline
-    ├── 119_String_Properties.js        # String properties — length, index access, charAt, charCodeAt
-    ├── 120_Search_Check_Str.js         # Searching & checking — includes, startsWith, endsWith, indexOf, search
-    ├── 121_Substring.js                # Substring extraction — slice, substring, includes
-    ├── 122_Transform_Str.js            # String transformation — toUpperCase, toLowerCase, trim, replace, split, join
-    ├── 123_SC.js                       # String transformation & concatenation — replaceAll, regex, concat
-    ├── Task_3_June.js                  # Task — reverse a string using split, reverse, join
-    └── Practice_str.js                 # Practice exercise — count vowels in a string
+├── chapter_13_Strings/
+│   ├── 118_Strings.js                  # String literals — single, double, backticks, multiline
+│   ├── 119_String_Properties.js        # String properties — length, index access, charAt, charCodeAt
+│   ├── 120_Search_Check_Str.js         # Searching & checking — includes, startsWith, endsWith, indexOf, search
+│   ├── 121_Substring.js                # Substring extraction — slice, substring, includes
+│   ├── 122_Transform_Str.js            # String transformation — toUpperCase, toLowerCase, trim, replace, split, join
+│   ├── 123_SC.js                       # String transformation & concatenation — replaceAll, regex, concat
+│   ├── Task_3_June.js                  # Task — reverse, palindrome, and anagram checks
+│   └── Practice_str.js                 # Practice exercise — count vowels in a string
+├── chapter_14_Objects/
+│   ├── 124_Objects.js                  # Object basics — empty object, literal syntax, JSON vs JS objects
+│   ├── 125_Objects2.js                 # Object references — key-value pairs, dot vs bracket notation, reference equality
+│   ├── 126_Objects_Creation.js         # Object creation patterns — literals, constructors, and dynamic keys
+│   ├── 127_Objects_REAL.js             # Real-world objects — config management with add, delete, and conditional access
+│   ├── 128_Primitive_Ref.js            # Primitive vs reference types — copied by value vs copied by reference
+│   ├── 129_Ob_Examples.js              # JSON vs JS object syntax comparison with examples
+│   ├── 130_IQ.js                       # Object property access — dot, bracket, dynamic keys, descriptors
+│   ├── 131_Object_Fn.js                # Methods inside objects — functions as object properties
+│   ├── 132_Obj_Decon.js               # Object destructuring — basic, rename, default values, nested destructuring
+│   ├── 133_Spead.js                   # Object spread operator — shallow copy, merging objects, const object mutation
+│   ├── 134_Objects_GET_SET_Methods.js  # Getters and setters — computed properties with `get` and `set`
+│   ├── 135_IQ.js                       # Object static methods — keys, values, entries, and `for...in` iteration
+│   ├── 136_Obj_REAL.js                # Real-world objects — ENV config, EXPECTED_RESPONSE, and test configuration
+│   └── 137_Let_const_obj.js           # `let` vs `const` with objects — reassigning reference vs mutating properties
+└── chapter_15_2D_Array/
+    ├── 138_2D_Array.js                 # 2D array basics — grid initialization, nested loops, row/column traversal
+    ├── 139_2d.js                      # 2D array dimensions — rows, columns, and grid indexing
+    ├── 140_REAL.js                    # Real-world 2D array — test matrix with status codes, nested loops and forEach
+    ├── 141_2d_Array_Fn.js             # 2D array functions — map, reduce on rows, filtering failed tests
+    ├── 142_IQ_Right_Pattern_Py.js     # Pattern programming — right-angled triangle with nested loops
+    └── 8th_june_task.js               # Class task (8th June) — reverse star pattern and full pyramid
 ```
 
 ---
@@ -393,8 +415,46 @@ Deep dive into JavaScript strings — literals, properties, searching, substring
 | `121_Substring.js` | `slice()`, `substring()`, `includes()` | Extracts substrings using `slice()` with positive and negative indices, `substring()`, and validates substrings with `includes()`. |
 | `122_Transform_Str.js` | `toUpperCase()`, `toLowerCase()`, `trim()`, `replace()`, `split()`, `join()` | Transforms strings: case conversion, whitespace trimming, single and global replacement, splitting into arrays, and joining arrays back into strings. |
 | `123_SC.js` | `replaceAll()`, regex replacement, `concat()`, template literals | Extended string transformations including `replaceAll()`, regex-based global replace, and three ways to concatenate strings: `+`, `concat()`, and template literals. |
-| `Task_3_June.js` | Reverse a string, palindrome check | Classic string reversal using `split("")`, `reverse()`, and `join("")`. Also includes manual reversal with a `for` loop (no built-ins) and a palindrome check comparing the original and reversed strings. |
+| `Task_3_June.js` | Reverse, palindrome, and anagram | Classic string reversal using `split("")`, `reverse()`, and `join("")`. Also includes manual reversal with a `for` loop, a palindrome check, and an anagram validator using sort comparison. |
 | `Practice_str.js` | String practice exercise | Counts vowels in a given string using `includes()` and a loop. Demonstrates basic string iteration and conditional counting. |
+
+---
+
+## Chapter 14 — Objects
+
+Deep dive into JavaScript objects — creation, access, methods, destructuring, spread, getters/setters, and real-world configuration objects.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `124_Objects.js` | Object basics — empty object, literal syntax | Introduces empty object `{}`, object literals with key-value pairs, and the difference between JavaScript objects and JSON format. |
+| `125_Objects2.js` | Key-value pairs, dot vs bracket notation, reference equality | Demonstrates accessing properties with dot and bracket notation. Shows object reference behavior — assigning one object to another copies the reference, not the value. |
+| `126_Objects_Creation.js` | Object creation patterns | Covers multiple ways to create objects: object literals, `new Object()`, and dynamic property keys. |
+| `127_Objects_REAL.js` | Real-world config management | Practical object usage: building a test config object dynamically, deleting properties with `delete`, and conditional access for Playwright-style configuration. |
+| `128_Primitive_Ref.js` | Primitive vs reference types | Side-by-side comparison: primitives (numbers, strings) are copied by value, while objects/arrays/functions are copied by reference. |
+| `129_Ob_Examples.js` | JSON vs JS object syntax | Compares JSON syntax (quoted keys) with JavaScript object syntax (unquoted keys) using `console.log` output. |
+| `130_IQ.js` | Property access, descriptors | Demonstrates dot notation, bracket notation, dynamic property access with variables, and introspecting property descriptors with `Object.getOwnPropertyDescriptor`. |
+| `131_Object_Fn.js` | Methods inside objects | Shows how to define functions as object properties (methods) and invoke them on the object. |
+| `132_Obj_Decon.js` | Object destructuring | Basic destructuring, variable renaming, default values, and deeply nested destructuring for API response objects. |
+| `133_Spead.js` | Object spread operator | Shallow copying objects with `{...obj}`, merging multiple objects, and mutating `const` object properties (allowed) vs reassigning the variable (not allowed). |
+| `134_Objects_GET_SET_Methods.js` | Getters and setters | Uses `get` and `set` keywords to create computed properties. Demonstrates `this` keyword inside object methods. |
+| `135_IQ.js` | Object static methods | `Object.keys()`, `Object.values()`, `Object.entries()`, and `for...in` loop for iterating over object properties. |
+| `136_Obj_REAL.js` | Real-world objects — ENV and API configs | Practical examples: environment configuration object, expected API response structure, and a complete test configuration object with nested settings. |
+| `137_Let_const_obj.js` | `let` vs `const` with objects | Demonstrates that `const` prevents reassignment of the variable but allows mutation of the object's properties. |
+
+---
+
+## Chapter 15 — 2D Arrays
+
+Working with two-dimensional arrays (matrices) in JavaScript — grid traversal, nested loops, real-world test matrices, and pattern programming.
+
+| File | Topics Covered | Description |
+|------|----------------|-------------|
+| `138_2D_Array.js` | 2D array basics, nested loops | Introduces 2D arrays as arrays of arrays. Prints all elements using nested `for` loops with row and column indices. |
+| `139_2d.js` | Dimensions, rows, columns | Demonstrates accessing individual cells with `grid[row][col]`. Shows how to get row count (`grid.length`) and column count (`grid[0].length`). |
+| `140_REAL.js` | Real-world test matrix | Stores test execution results in a 2D array (test name, status, response time). Traverses with nested loops, `for...of`, and `forEach`. |
+| `141_2d_Array_Fn.js` | 2D array functions | Uses `map` + `reduce` to compute row sums (student scores). Filters failed test cases from a suite results matrix using `includes`. |
+| `142_IQ_Right_Pattern_Py.js` | Right-angled triangle pattern | Classic nested-loop pattern: prints a right-angled triangle of stars with increasing row lengths. |
+| `8th_june_task.js` | Reverse pattern and pyramid | Class task from 8th June: reverse star triangle (decreasing row lengths) and a full pyramid with spaces and underscores. |
 
 ---
 

@@ -26,3 +26,20 @@ if (str2 == reversed2) {
 else {
     console.log("This is not a Palindrome")
 }
+
+
+// Function to check whether two strings 
+// are anagram of each other 
+function areAnagram(str1, str2) {
+
+    if (str1.length !== str2.length) {
+        return false;
+    }
+
+    str1 = str1.split("").sort().join("");
+    str2 = str2.split("").sort().join("");
+
+    return str1 === str2;
+}
+
+console.log(areAnagram("Top", "Pot"));
