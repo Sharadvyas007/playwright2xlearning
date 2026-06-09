@@ -507,6 +507,7 @@ Repeating code blocks using `for`, `while`, and `do...while`.
 | `81_IQ.js` | `continue` statement | Skips the current iteration. |
 | `82_IQ.js` | Do-while missing increment | Common infinite loop bug. |
 | `Task_22nd_may.js` | Class task (22 May) | Triangle check and FizzBuzz. |
+| `loops_practice.js` | Loop practice | Number sequences, stars, count, sum, even numbers. |
 
 ```javascript
 // 72_For_loop.js
@@ -577,6 +578,7 @@ Deep dive into JavaScript functions — declarations, expressions, arrow functio
 | `116_Higher_Order_Fn.js` | Higher-order functions | Accepting functions as arguments. |
 | `117_Pure_Fn.js` | Pure vs impure functions | Predictable output and no side effects. |
 | `fn_practices.js` | Function practice | All four types, return vs `console.log`. |
+| `day_2_practice.js` | Day 2 practice | Eligibility, voting, even/odd, login validation, marks, status code. |
 
 ```javascript
 // 104_Arrow_Fn_REAL.js
