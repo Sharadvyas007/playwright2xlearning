@@ -204,6 +204,18 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 141_2d_Array_Fn.js
 │   ├── 142_IQ_Right_Pattern_Py.js
 │   └── 8th_june_task.js
+├── chapter_16_Callback/                  # Callbacks — sync, async, callback hell
+│   ├── 143_Callback.js
+│   ├── 144_CB.js
+│   ├── 145_CB_Fn.js
+│   ├── 146_PW_CB.js
+│   ├── 147_JS_CB.js
+│   ├── 148_Sync_CB.js
+│   ├── 149_Async_CB.js
+│   ├── 150_CB_Hell.js
+│   ├── 151_CB_Hell_20_Steps.js
+│   ├── 152_CB_Parameter.js
+│   └── 153_CB_Return.js
 ├── package.json                          # Project manifest
 ├── package-lock.json                     # Locked dependencies
 ├── playwright.config.js                    # Playwright test configuration
@@ -700,6 +712,37 @@ for (let i = 0; i < grid.length; i++) {
 // → 10, 20, 30, 40, 50, 60, 70, 80, 90
 ```
 
+### Chapter 16 — Callbacks
+
+Understanding callback functions — the foundation of asynchronous JavaScript.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `143_Callback.js` | Callback basics | Passing named, anonymous, and arrow functions as arguments. |
+| `144_CB.js` | Simple callback pattern | Basic callback invocation inside a test wrapper. |
+| `145_CB_Fn.js` | Real-world callback | Cafe order simulation with named and anonymous callbacks. |
+| `146_PW_CB.js` | Playwright-style callback | Custom `test(name, callback)` wrapper mimicking test frameworks. |
+| `147_JS_CB.js` | Async introduction | `setTimeout` callback and the event loop order. |
+| `148_Sync_CB.js` | Synchronous callback | `forEach` iteration with an inline callback function. |
+| `149_Async_CB.js` | Asynchronous callback | `setTimeout` deferred execution vs immediate logs. |
+| `150_CB_Hell.js` | Callback hell (4-step) | Nested async callbacks for login flow — pyramid begins. |
+| `151_CB_Hell_20_Steps.js` | Callback hell (24-step) | Full e-commerce checkout pyramid — the "Pyramid of Doom". |
+| `152_CB_Parameter.js` | Callbacks with parameters | Passing data into callbacks and tester greeting examples. |
+| `153_CB_Return.js` | Callbacks that return | Higher-order `calculate` with an operation callback and nesting. |
+
+```javascript
+// 150_CB_Hell.js — 4-step nested async callback
+openBrowser(function () {
+    goToLoginPage(function () {
+        enterCredentials(function () {
+            clickLogin(function () {
+                console.log("Test Complete!");
+            });
+        });
+    });
+});
+```
+
 ---
 
 ## Playwright Testing
@@ -777,12 +820,13 @@ A GitHub Actions workflow (`.github/workflows/playwright.yml`) automatically run
 - [x] Chapter 13 — Strings: Quotes, search, slice, transform, conversion
 - [x] Chapter 14 — Objects: Literals, reference, destructuring, spread, getters/setters
 - [x] Chapter 15 — 2D Arrays: Grids, nested loops, test matrices, patterns
+- [x] Chapter 16 — Callbacks: Sync, async, callback hell, pyramid of doom
 - [x] Playwright setup with sample tests
 - [x] GitHub Actions CI workflow
 
 ### Coming Soon
 
-- [ ] Async JavaScript — Callbacks, Promises, Async/Await
+- [ ] Async JavaScript — Promises, Async/Await
 - [ ] Object-Oriented Programming — Classes, inheritance
 - [ ] TypeScript — Type-safe automation code
 - [ ] Advanced Playwright — Page Object Model, fixtures, API testing
