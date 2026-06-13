@@ -147,8 +147,9 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 92_Arrays.js
 │   ├── 93_Array_Slicing.js
 │   ├── 94_Concat_array.js
-│   ├── 95_Array_Checking.js
-│   └── Practice_arr.js
+    │   ├── 95_Array_Checking.js
+    │   ├── Practice_arr.js
+    │   └── Arrays_Practice.js
 ├── chapter_12_Funtions/                  # Functions — declarations, arrow, closures
 │   ├── 96_Functions.js
 │   ├── 97_Type1_Fn_Basic_Functions.js
@@ -171,8 +172,9 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 114_Closure.js
 │   ├── 115_API_REAL_Closure.js
 │   ├── 116_Higher_Order_Fn.js
-│   ├── 117_Pure_Fn.js
-│   └── fn_practices.js
+    │   ├── 117_Pure_Fn.js
+    │   ├── fn_practices.js
+    │   └── Arrow_Fun_pratice.js
 ├── chapter_13_Strings/                   # Strings — quotes, search, slice, transform
 │   ├── 118_Strings.js
 │   ├── 119_String_Properties.js
@@ -195,8 +197,9 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 133_Spead.js
 │   ├── 134_Objects_GET_SET_Methods.js
 │   ├── 135_IQ.js
-│   ├── 136_Obj_REAL.js
-│   └── 137_Let_const_obj.js
+    │   ├── 136_Obj_REAL.js
+    │   ├── 137_Let_const_obj.js
+    │   └── Obj_Practice.js
 ├── chapter_15_2D_Array/                  # 2D Arrays — grids, nested loops, patterns
 │   ├── 138_2D_Array.js
 │   ├── 139_2d.js
@@ -550,6 +553,7 @@ Working with ordered collections — creation, access, mutation, searching, iter
 | `94_Concat_array.js` | `concat`, spread, `join` | Combining and stringifying arrays. |
 | `95_Array_Checking.js` | `Array.isArray`, `every`, `some` | Validation and predicate checks. |
 | `Practice_arr.js` | Practice exercises | Index search, length, even/odd count, sum, largest. |
+| `Arrays_Practice.js` | Array practice | Index access, length, mutation, adding elements. |
 
 ```javascript
 // 91_Transform_Arrays.js
@@ -590,6 +594,7 @@ Deep dive into JavaScript functions — declarations, expressions, arrow functio
 | `116_Higher_Order_Fn.js` | Higher-order functions | Accepting functions as arguments. |
 | `117_Pure_Fn.js` | Pure vs impure functions | Predictable output and no side effects. |
 | `fn_practices.js` | Function practice | All four types, return vs `console.log`. |
+| `Arrow_Fun_pratice.js` | Arrow function practice | Simple arrow functions, age check, add, multiply, greet. |
 | `day_2_practice.js` | Day 2 practice | Eligibility, voting, even/odd, login validation, marks, status code. |
 
 ```javascript
@@ -662,6 +667,7 @@ Deep dive into JavaScript objects — creation, access, methods, destructuring, 
 | `135_IQ.js` | Iterate objects | `Object.keys/values/entries`, `for...in`. |
 | `136_Obj_REAL.js` | Real-world objects | ENV config, expected response, test config. |
 | `137_Let_const_obj.js` | `let` vs `const` with objects | Mutate properties freely; `const` blocks reassignment. |
+| `Obj_Practice.js` | Object practice | Dot access, mutation, function + object, dynamic key access. |
 
 ```javascript
 // 128_Primitive_Ref.js
