@@ -114,8 +114,9 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 63_Switch_Group.js
 │   ├── 64_IQ_Switch.js
 │   ├── 65_IQ2.js
-│   ├── 66_IQ3.js
-│   └── 67_IQ4.js
+    │   ├── 66_IQ3.js
+    │   ├── 67_IQ4.js
+    │   └── Switch_Cases_Test.js
 ├── chapter_09_UserInput/                 # Reading user input in Node.js
 │   ├── 68_User_Input.js
 │   ├── 69_NODE_Readline.js
@@ -463,6 +464,7 @@ Control flow using switch-case constructs.
 | `65_IQ2.js` | `switch(true)` with ranges | Alternative to if-else ladders. |
 | `66_IQ3.js` | Duplicate case behavior | Only the first match executes. |
 | `67_IQ4.js` | Type coercion in switch | Switch uses strict equality (`===`). |
+| `Switch_Cases_Test.js` | HTTP status code switch | Real-world API status code validation (200, 404, 500, etc.). |
 
 ```javascript
 // 62_REAL_TIME_EXAMPLE.js

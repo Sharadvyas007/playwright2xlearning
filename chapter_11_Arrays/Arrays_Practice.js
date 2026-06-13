@@ -18,3 +18,13 @@ fruit[2] = "Apple"
 fruit[4] = "Watermelon"
 console.log(fruit.length);
 console.log(fruit);
+
+
+console.log(x); var x = 5;
+
+
+const arr = [1, 2, 3];
+arr.push(4);
+console.log(arr);
+
+for (let i = 0; i < 5; i++) { if (i === 3) break; } console.log(i);
