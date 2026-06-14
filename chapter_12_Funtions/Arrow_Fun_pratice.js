@@ -60,3 +60,8 @@ const add = (a, b) => a + b;
 const result = add(10, 20);
 
 console.log(result);
+
+// arrow with if else conditions - 
+
+const checkAge = (age) => age >= 18 ? "Adult" : "Minor";
+console.log(checkAge(17));
