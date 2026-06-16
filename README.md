@@ -617,6 +617,7 @@ Deep dive into JavaScript functions — declarations, expressions, arrow functio
 | `fn_practices.js` | Function practice | All four types, return vs `console.log`. |
 | `Arrow_Fun_pratice.js` | Arrow function practice | Simple arrow functions, age check, add, multiply, greet. |
 | `day_2_practice.js` | Day 2 practice | Eligibility, voting, even/odd, login validation, marks, status code. |
+| `function_practice_obj.js` | Functions with objects | Passing objects to functions, returning objects, and mutating properties. |
 
 ```javascript
 // 104_Arrow_Fn_REAL.js
