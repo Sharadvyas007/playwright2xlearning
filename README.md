@@ -12,6 +12,7 @@ A collection of **Playwright** and **JavaScript** concept exercises for learning
 - [Chapter Guide](#chapter-guide)
 - [Chapter 17 — Promises](#chapter-17--promises)
 - [Chapter 18 — Async/Await](#chapter-18--asyncawait)
+- [Chapter 19 — Playwright Basics](#chapter-19--playwright-basics)
 - [Playwright Testing](#playwright-testing)
 - [CI / CD](#ci--cd)
 - [Roadmap](#roadmap)
@@ -239,6 +240,8 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 165_AA_Parallel.js
 │   ├── 166_IQ.js
 │   └── 167_ACLogin.js
+├── chapter_19_playwright_basics/         # Playwright Basics — first real E2E test
+│   └── tta-cart.spec.ts                  # TTACart end-to-end checkout flow
 ├── package.json                          # Project manifest
 ├── package-lock.json                     # Locked dependencies
 ├── playwright.config.js                    # Playwright test configuration
@@ -267,7 +270,7 @@ git clone https://github.com/Sharadvyas007/playwright2xlearning.git
 cd playwright2xlearning
 
 # 2. Install dependencies
-npm ci
+npm install
 
 # 3. Verify your setup
 node chapter_01_basics/03_Verify_Setup.js
@@ -850,6 +853,36 @@ runTheE2E();
 
 ---
 
+### Chapter 19 — Playwright Basics
+
+First real-world end-to-end test using Playwright — automating a full e-commerce checkout flow.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `tta-cart.spec.ts` | E2E test with Playwright | Login, add to cart, checkout, and order completion on TTACart. |
+
+**Test Flow:**
+1. Navigate to `https://app.thetestingacademy.com/playwright/ttacart/`
+2. Login with `standard_user` / `tta_secret`
+3. Add two items to cart (T-Shirt Red, Bike Light)
+4. Go to cart and click checkout
+5. Fill shipping details (First Name, Last Name, Postal Code)
+6. Continue and finish the order
+7. Verify checkout complete
+
+```bash
+# Run the TTACart test
+npx playwright test tta-cart.spec.ts
+
+# Run in headed mode (see the browser)
+npx playwright test tta-cart.spec.ts --headed
+
+# Run with HTML report
+npx playwright test tta-cart.spec.ts --reporter=html
+```
+
+---
+
 ## Playwright Testing
 
 This repository includes a full **Playwright** setup for end-to-end browser automation.
@@ -857,6 +890,7 @@ This repository includes a full **Playwright** setup for end-to-end browser auto
 | File | Purpose |
 |------|---------|
 | `playwright.config.js` | Cross-browser config (Chromium, Firefox, WebKit) with HTML reporting |
+| `chapter_19_playwright_basics/tta-cart.spec.ts` | Real E2E test — TTACart checkout flow |
 | `tests/example.spec.js` | Sample E2E tests on [playwright.dev](https://playwright.dev/) |
 | `package.json` | `@playwright/test` as a dev dependency |
 
@@ -868,6 +902,12 @@ npx playwright install
 
 # Run all tests
 npx playwright test
+
+# Run a specific test file
+npx playwright test tta-cart.spec.ts
+
+# Run in headed mode (visible browser)
+npx playwright test tta-cart.spec.ts --headed
 
 # Run with HTML report
 npx playwright test --reporter=html
@@ -928,6 +968,7 @@ A GitHub Actions workflow (`.github/workflows/playwright.yml`) automatically run
 - [x] Chapter 16 — Callbacks: Sync, async, callback hell, pyramid of doom
 - [x] Chapter 17 — Promises: resolve, reject, chaining, Promise.all, Promise.allSettled
 - [x] Chapter 18 — Async/Await: sequential, parallel, error handling, Playwright patterns
+- [x] Chapter 19 — Playwright Basics: first real E2E test (TTACart checkout flow)
 - [x] Playwright setup with sample tests
 - [x] GitHub Actions CI workflow
 
