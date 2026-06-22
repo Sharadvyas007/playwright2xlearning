@@ -13,6 +13,7 @@ A collection of **Playwright** and **JavaScript** concept exercises for learning
 - [Chapter 17 — Promises](#chapter-17--promises)
 - [Chapter 18 — Async/Await](#chapter-18--asyncawait)
 - [Chapter 19 — Playwright Basics](#chapter-19--playwright-basics)
+- [Chapter 20 — OOPs Basics](#chapter-20--oops-basics)
 - [Playwright Testing](#playwright-testing)
 - [CI / CD](#ci--cd)
 - [Roadmap](#roadmap)
@@ -242,6 +243,20 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   └── 167_ACLogin.js
 ├── chapter_19_playwright_basics/         # Playwright Basics — first real E2E test
 │   └── tta-cart.spec.ts                  # TTACart end-to-end checkout flow
+├── chapter_20_OOPs_Basics/               # OOPs Basics — classes, objects, static, export/import
+│   ├── 01_EXPORT_IMPORT/
+│   │   ├── 168_EXPORT_IMPORT.js
+│   │   ├── 169_Utils.js
+│   │   └── 170_logger.js
+│   └── 02_CLASS_OBJECT/
+│       ├── 171_Class_Object.js
+│       ├── 172_Class_Object2.js
+│       ├── 173_Car.js
+│       ├── 174_REAL_Browser.js
+│       ├── 175_IQ.js
+│       ├── 176_Private_Public.js
+│       ├── 177_Static.js
+│       └── 178_Static.js
 ├── package.json                          # Project manifest
 ├── package-lock.json                     # Locked dependencies
 ├── playwright.config.js                    # Playwright test configuration
@@ -883,6 +898,58 @@ npx playwright test tta-cart.spec.ts --reporter=html
 
 ---
 
+### Chapter 20 — OOPs Basics
+
+Introduction to Object-Oriented Programming in JavaScript — classes, objects, constructors, access modifiers, static members, and ES module export/import patterns.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `168_EXPORT_IMPORT.js` | ES module `import` | Named imports from shared utility modules. |
+| `169_Utils.js` | Aliased imports (`as`) | Importing the same export with different aliases. |
+| `170_logger.js` | Default import | Importing a default-exported logger function. |
+| `171_Class_Object.js` | Class definition | Empty class with attributes and behaviours. |
+| `172_Class_Object2.js` | Constructor | `constructor()` runs automatically on `new`. |
+| `173_Car.js` | Constructor with parameters | Passing arguments to constructor (`new Car("Model S")`). |
+| `174_REAL_Browser.js` | Real-world class | `TestCase` class with constructor and `display()` method. |
+| `175_IQ.js` | Interview question — Browser class | Parametric constructor launching browser instances. |
+| `176_Private_Public.js` | Private fields (`#`) | Hiding sensitive data with private class fields. |
+| `177_Static.js` | Static properties & methods | Shared class-level data and behaviour. |
+| `178_Static.js` | Static vs instance | Accessing static members on the class, not the object. |
+
+```javascript
+// 174_REAL_Browser.js — Real-world TestCase class
+class TestCase {
+    constructor(name, status, priority) {
+        this.name = name;
+        this.status = status;
+        this.priority = priority;
+    }
+    display() {
+        console.log(this.name + " → " + this.status + " → " + this.priority);
+    }
+}
+let loginTC = new TestCase("Login Test", "Pass", "P0");
+loginTC.display();  // Login Test → Pass → P0
+```
+
+```javascript
+// 176_Private_Public.js — Private fields
+class Credentials {
+    #apiKey;
+    constructor(user, key) {
+        this.user = user;
+        this.#apiKey = key;
+    }
+    getAuthHeader() {
+        return "Bearer " + this.#apiKey;
+    }
+}
+let cred = new Credentials("admin", "secret_key_1234");
+console.log(cred.getAuthHeader());  // Bearer secret_key_1234
+```
+
+---
+
 ## Playwright Testing
 
 This repository includes a full **Playwright** setup for end-to-end browser automation.
@@ -969,12 +1036,13 @@ A GitHub Actions workflow (`.github/workflows/playwright.yml`) automatically run
 - [x] Chapter 17 — Promises: resolve, reject, chaining, Promise.all, Promise.allSettled
 - [x] Chapter 18 — Async/Await: sequential, parallel, error handling, Playwright patterns
 - [x] Chapter 19 — Playwright Basics: first real E2E test (TTACart checkout flow)
+- [x] Chapter 20 — OOPs Basics: classes, objects, constructors, static, private fields, export/import
 - [x] Playwright setup with sample tests
 - [x] GitHub Actions CI workflow
 
 ### Coming Soon
 
-- [ ] Object-Oriented Programming — Classes, inheritance
+- [ ] TypeScript — Type-safe automation code
 - [ ] TypeScript — Type-safe automation code
 - [ ] Advanced Playwright — Page Object Model, fixtures, API testing
 - [ ] AI Agents — Self-healing tests, MCP-driven STLC
