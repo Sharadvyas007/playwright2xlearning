@@ -116,7 +116,8 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 58_Task_20may.js
 │   ├── Task_21_May.js
 │   ├── Practice_IF_ELSE.js
-│   └── iF_else_Pratcie.js
+│   ├── iF_else_Pratcie.js
+│   └── task_test.js
 ├── Chapter_08_Switch_Statement.js/       # Switch cases
 │   ├── 59_Switch.js
 │   ├── 60_No_Break.js
@@ -125,9 +126,10 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 63_Switch_Group.js
 │   ├── 64_IQ_Switch.js
 │   ├── 65_IQ2.js
-    │   ├── 66_IQ3.js
-    │   ├── 67_IQ4.js
-    │   └── Switch_Cases_Test.js
+│   ├── 66_IQ3.js
+│   ├── 67_IQ4.js
+│   ├── Switch_Cases_Test.js
+│   └── task_live_test.js
 ├── chapter_09_UserInput/                 # Reading user input in Node.js
 │   ├── 68_User_Input.js
 │   ├── 69_NODE_Readline.js
@@ -145,6 +147,7 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 80_IQ.js
 │   ├── 81_IQ.js
 │   ├── 82_IQ.js
+│   ├── loops_practice.js
 │   └── Task_22nd_may.js
 ├── chapter_11_Arrays/                    # Arrays — creation, search, iterate, transform
 │   ├── 83_Arrays.js
@@ -184,9 +187,11 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 114_Closure.js
 │   ├── 115_API_REAL_Closure.js
 │   ├── 116_Higher_Order_Fn.js
-    │   ├── 117_Pure_Fn.js
-    │   ├── fn_practices.js
-    │   └── Arrow_Fun_pratice.js
+│   ├── 117_Pure_Fn.js
+│   ├── fn_practices.js
+│   ├── Arrow_Fun_pratice.js
+│   ├── day_2_practice.js
+│   └── function_practice_obj.js
 ├── chapter_13_Strings/                   # Strings — quotes, search, slice, transform
 │   ├── 118_Strings.js
 │   ├── 119_String_Properties.js
@@ -218,6 +223,7 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 140_REAL.js
 │   ├── 141_2d_Array_Fn.js
 │   ├── 142_IQ_Right_Pattern_Py.js
+│   ├── 2D_Array_practice.js
 │   └── 8th_june_task.js
 ├── chapter_16_Callback/                  # Callbacks — sync, async, callback hell
 │   ├── 143_Callback.js
@@ -288,9 +294,10 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   └── EX4.js
 ├── chapter_26_Typescript/                # TypeScript fundamentals — types, generics, IQ
 │   ├── 193_TS.ts
+│   ├── 194_TS_HelloWorld.js
 │   ├── 194_TS_HelloWorld.ts
 │   ├── 195_TS_Part1.ts
-│   ├── 196_TS_Part2.ts
+│   ├── 196_TS_Part2,ts
 │   ├── 197_TS_Part2.ts
 │   ├── 198_Part3.ts
 │   ├── 199_IQ.ts
@@ -513,6 +520,7 @@ Control flow using conditional if-else logic.
 | `Task_21_May.js` | Class task (21 May) | HTTP status, test verdict, bug severity, build health. |
 | `Practice_IF_ELSE.js` | Practice exercises | Combined even/odd, grade, leap year practice. |
 | `iF_else_Pratcie.js` | Extra practice | Expected vs actual result, HTTP status categorization. |
+| `task_test.js` | Task test | Additional if-else practice exercises. |
 
 ```javascript
 // 49_If_elseif_else.js — Grade calculator
@@ -546,6 +554,7 @@ Control flow using switch-case constructs.
 | `66_IQ3.js` | Duplicate case behavior | Only the first match executes. |
 | `67_IQ4.js` | Type coercion in switch | Switch uses strict equality (`===`). |
 | `Switch_Cases_Test.js` | HTTP status code switch | Real-world API status code validation (200, 404, 500, etc.). |
+| `task_live_test.js` | Live task | Switch-case live coding practice. |
 
 ```javascript
 // 62_REAL_TIME_EXAMPLE.js
@@ -784,6 +793,7 @@ Working with two-dimensional arrays — grid traversal, nested loops, test matri
 | `140_REAL.js` | Real-world test matrix | Test results with nested loops and `forEach`. |
 | `141_2d_Array_Fn.js` | `map` + `reduce` on rows | Row sums, filtering failed tests. |
 | `142_IQ_Right_Pattern_Py.js` | Right-triangle stars | Nested-loop pattern programming. |
+| `2D_Array_practice.js` | 2D array practice | Grid traversal and manipulation exercises. |
 | `8th_june_task.js` | Class task (8 June) | Reverse star triangle and full pyramid. |
 
 ```javascript
@@ -1098,9 +1108,10 @@ Type-safe JavaScript — static types, interfaces, generics, and compilation.
 | File | Topics | Description |
 |------|--------|-------------|
 | `193_TS.ts` | TypeScript intro | Why TypeScript and basic type annotations. |
+| `194_TS_HelloWorld.js` | Hello World in JS | JavaScript version of the hello-world example. |
 | `194_TS_HelloWorld.ts` | First TS program | Compiling and running `.ts` files. |
 | `195_TS_Part1.ts` | Primitive types | `string`, `number`, `boolean`, `any`, `unknown`. |
-| `196_TS_Part2.ts` | Arrays & tuples | Typed arrays and fixed-length tuples. |
+| `196_TS_Part2,ts` | Arrays & tuples | Typed arrays and fixed-length tuples. |
 | `197_TS_Part2.ts` | Functions in TS | Parameter and return type annotations. |
 | `198_Part3.ts` | Objects & enums | Typed object shapes and enum declarations. |
 | `199_IQ.ts` | TypeScript IQ 1 | Common type inference traps. |
