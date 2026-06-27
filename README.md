@@ -13,7 +13,14 @@ A collection of **Playwright** and **JavaScript** concept exercises for learning
 - [Chapter 17 — Promises](#chapter-17--promises)
 - [Chapter 18 — Async/Await](#chapter-18--asyncawait)
 - [Chapter 19 — Playwright Basics](#chapter-19--playwright-basics)
-- [Chapter 20 — OOPs Basics](#chapter-20--oops-basics)
+- [Chapter 20 — Export / Import](#chapter-20--export--import)
+- [Chapter 21 — Classes and Objects](#chapter-21--classes-and-objects)
+- [Chapter 22 — Encapsulation](#chapter-22--encapsulation)
+- [Chapter 23 — Inheritance](#chapter-23--inheritance)
+- [Chapter 24 — Polymorphism](#chapter-24--polymorphism)
+- [Chapter 25 — OOP Interview Questions](#chapter-25--oop-interview-questions)
+- [Chapter 26 — TypeScript Basics](#chapter-26--typescript-basics)
+- [Chapter 27 — TypeScript Interfaces](#chapter-27--typescript-interfaces)
 - [Playwright Testing](#playwright-testing)
 - [CI / CD](#ci--cd)
 - [Roadmap](#roadmap)
@@ -26,7 +33,7 @@ A collection of **Playwright** and **JavaScript** concept exercises for learning
 
 This repository is a structured learning path covering JavaScript fundamentals — variables, operators, control flow, arrays, functions, strings, objects, and 2D arrays — up to modern **Playwright** end-to-end browser automation. Each chapter contains focused `.js` files with hands-on examples, interview questions (IQ), and real-world QA scenarios.
 
-**Tech Stack:** JavaScript, Node.js, Playwright, GitHub Actions
+**Tech Stack:** JavaScript, TypeScript, Node.js, Playwright, GitHub Actions
 
 ---
 
@@ -243,20 +250,57 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   └── 167_ACLogin.js
 ├── chapter_19_playwright_basics/         # Playwright Basics — first real E2E test
 │   └── tta-cart.spec.ts                  # TTACart end-to-end checkout flow
-├── chapter_20_OOPs_Basics/               # OOPs Basics — classes, objects, static, export/import
-│   ├── 01_EXPORT_IMPORT/
-│   │   ├── 168_EXPORT_IMPORT.js
-│   │   ├── 169_Utils.js
-│   │   └── 170_logger.js
-│   └── 02_CLASS_OBJECT/
-│       ├── 171_Class_Object.js
-│       ├── 172_Class_Object2.js
-│       ├── 173_Car.js
-│       ├── 174_REAL_Browser.js
-│       ├── 175_IQ.js
-│       ├── 176_Private_Public.js
-│       ├── 177_Static.js
-│       └── 178_Static.js
+├── chapter_20_Export_Import/             # ES Modules — named, default, and aliased imports
+│   └── 01_EXPORT_IMPORT/
+│       ├── 168_EXPORT_IMPORT.js
+│       ├── 169_Utils.js
+│       └── 170_logger.js
+├── chapter_21_Classes_and_Objects/       # Classes, constructors, private fields, static members
+│   ├── 171_Class_Object.js
+│   ├── 172_Class_Object2.js
+│   ├── 173_Car.js
+│   ├── 174_REAL_Browser.js
+│   ├── 175_IQ.js
+│   ├── 176_Private_Public.js
+│   ├── 177_Static.js
+│   └── 178_Static.js
+├── chapter_22_Encapsulation/             # Data hiding, getters, setters, real-world examples
+│   ├── 179_Ecap.js
+│   ├── 180_REAL_EXAMPLE
+│   ├── 181_Ecap_Car.js
+│   └── 182_ECap_Bank.js
+├── chapter_23_Inheritance/               # Single, multiple, multilevel, hierarchical inheritance
+│   ├── 183_Single_Inheritance.js
+│   ├── 184_SI_Example.js
+│   ├── 185_Single_Inheritance_Con.js
+│   ├── 186_IQ.js
+│   ├── 187_IQ2.js
+│   ├── 188_REAL_PageObject_Model.js
+│   ├── 189_Multiple_Inheritance.js
+│   ├── 190_Multiple_Level_Inheritance.js
+│   └── 191_Hierarchial_Inheritance.js
+├── chapter_24_Polymorphism/              # Method overriding and runtime polymorphism
+│   └── 192_Method_Overriding.js
+├── chapter_25_OOP_Interview_Questions/   # OOP coding interview exercises
+│   ├── EX1.js
+│   ├── EX2.js
+│   ├── EX3.js
+│   └── EX4.js
+├── chapter_26_Typescript/                # TypeScript fundamentals — types, generics, IQ
+│   ├── 193_TS.ts
+│   ├── 194_TS_HelloWorld.ts
+│   ├── 195_TS_Part1.ts
+│   ├── 196_TS_Part2.ts
+│   ├── 197_TS_Part2.ts
+│   ├── 198_Part3.ts
+│   ├── 199_IQ.ts
+│   └── 200_IQ.ts
+├── chapter_27_TypeScript_Interface/      # Interfaces, readonly, optional properties
+│   ├── 201_IF.ts
+│   ├── 202_IF_Part2.ts
+│   ├── 203_IF_READONLY.ts
+│   └── 204_IF_READOnly.ts
+├── tsconfig.json                         # TypeScript compiler configuration
 ├── package.json                          # Project manifest
 ├── package-lock.json                     # Locked dependencies
 ├── playwright.config.js                    # Playwright test configuration
@@ -898,15 +942,31 @@ npx playwright test tta-cart.spec.ts --reporter=html
 
 ---
 
-### Chapter 20 — OOPs Basics
+### Chapter 20 — Export / Import
 
-Introduction to Object-Oriented Programming in JavaScript — classes, objects, constructors, access modifiers, static members, and ES module export/import patterns.
+ES module patterns — named imports, default imports, and aliased imports.
 
 | File | Topics | Description |
 |------|--------|-------------|
-| `168_EXPORT_IMPORT.js` | ES module `import` | Named imports from shared utility modules. |
+| `168_EXPORT_IMPORT.js` | Named `import` | Importing named exports from utility modules. |
 | `169_Utils.js` | Aliased imports (`as`) | Importing the same export with different aliases. |
-| `170_logger.js` | Default import | Importing a default-exported logger function. |
+| `170_logger.js` | Default `import` | Importing a default-exported logger function. |
+
+```javascript
+// 168_EXPORT_IMPORT.js
+import { add, subtract } from './math.js';
+console.log(add(2, 3));        // 5
+console.log(subtract(5, 2));   // 3
+```
+
+---
+
+### Chapter 21 — Classes and Objects
+
+Object-Oriented Programming fundamentals — classes, constructors, private fields, and static members.
+
+| File | Topics | Description |
+|------|--------|-------------|
 | `171_Class_Object.js` | Class definition | Empty class with attributes and behaviours. |
 | `172_Class_Object2.js` | Constructor | `constructor()` runs automatically on `new`. |
 | `173_Car.js` | Constructor with parameters | Passing arguments to constructor (`new Car("Model S")`). |
@@ -946,6 +1006,135 @@ class Credentials {
 }
 let cred = new Credentials("admin", "secret_key_1234");
 console.log(cred.getAuthHeader());  // Bearer secret_key_1234
+```
+
+---
+
+### Chapter 22 — Encapsulation
+
+Data hiding and controlled access using getters, setters, and private fields.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `179_Ecap.js` | Encapsulation basics | Private fields with public getter/setter methods. |
+| `180_REAL_EXAMPLE` | Real-world example | Encapsulated API config with validation. |
+| `181_Ecap_Car.js` | Car class encapsulation | Speed validation via setter methods. |
+| `182_ECap_Bank.js` | Bank account encapsulation | Balance protection with deposit/withdraw rules. |
+
+---
+
+### Chapter 23 — Inheritance
+
+Reusing and extending class behaviour — single, multiple, multilevel, and hierarchical inheritance patterns.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `183_Single_Inheritance.js` | Single inheritance basics | `extends` keyword and `super()` call. |
+| `184_SI_Example.js` | Single inheritance example | QA Engineer extends Employee. |
+| `185_Single_Inheritance_Con.js` | Constructor inheritance | Passing parameters to parent constructor. |
+| `186_IQ.js` | Inheritance IQ | Method overriding and `super` usage. |
+| `187_IQ2.js` | Inheritance IQ 2 | Shadowing and prototype chain traps. |
+| `188_REAL_PageObject_Model.js` | Real-world POM | Page Object Model using inheritance. |
+| `189_Multiple_Inheritance.js` | Multiple inheritance | Mix-ins and composition patterns. |
+| `190_Multiple_Level_Inheritance.js` | Multilevel inheritance | Grandparent → Parent → Child chain. |
+| `191_Hierarchial_Inheritance.js` | Hierarchical inheritance | One parent, multiple child classes. |
+
+```javascript
+// 183_Single_Inheritance.js
+class Animal {
+    speak() {
+        console.log("Animal speaks");
+    }
+}
+class Dog extends Animal {
+    speak() {
+        console.log("Dog barks");
+    }
+}
+let d = new Dog();
+d.speak();  // Dog barks
+```
+
+---
+
+### Chapter 24 — Polymorphism
+
+Runtime polymorphism through method overriding.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `192_Method_Overriding.js` | Method overriding | Child class overrides parent method. |
+
+```javascript
+// 192_Method_Overriding.js
+class Browser {
+    launch() { console.log("Launching generic browser"); }
+}
+class Chrome extends Browser {
+    launch() { console.log("Launching Chrome"); }
+}
+new Chrome().launch();  // Launching Chrome
+```
+
+---
+
+### Chapter 25 — OOP Interview Questions
+
+Hands-on OOP coding exercises for interviews.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `EX1.js` | Design a `Student` class | Encapsulation + inheritance exercise. |
+| `EX2.js` | Design a `Shape` hierarchy | Polymorphism with area calculation. |
+| `EX3.js` | Design a `BankAccount` | Encapsulation with transaction history. |
+| `EX4.js` | Design a `Vehicle` fleet | Hierarchical inheritance exercise. |
+
+---
+
+### Chapter 26 — TypeScript Basics
+
+Type-safe JavaScript — static types, interfaces, generics, and compilation.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `193_TS.ts` | TypeScript intro | Why TypeScript and basic type annotations. |
+| `194_TS_HelloWorld.ts` | First TS program | Compiling and running `.ts` files. |
+| `195_TS_Part1.ts` | Primitive types | `string`, `number`, `boolean`, `any`, `unknown`. |
+| `196_TS_Part2.ts` | Arrays & tuples | Typed arrays and fixed-length tuples. |
+| `197_TS_Part2.ts` | Functions in TS | Parameter and return type annotations. |
+| `198_Part3.ts` | Objects & enums | Typed object shapes and enum declarations. |
+| `199_IQ.ts` | TypeScript IQ 1 | Common type inference traps. |
+| `200_IQ.ts` | TypeScript IQ 2 | `any` vs `unknown` and strict mode. |
+
+```bash
+# Compile TypeScript
+npx tsc chapter_26_Typescript/194_TS_HelloWorld.ts
+
+# Run with ts-node
+npx ts-node chapter_26_Typescript/194_TS_HelloWorld.ts
+```
+
+---
+
+### Chapter 27 — TypeScript Interfaces
+
+Defining contracts with interfaces — optional properties, readonly modifiers, and extension.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `201_IF.ts` | Interface basics | Declaring object shapes with `interface`. |
+| `202_IF_Part2.ts` | Optional & nested properties | `?` for optional fields and nested interfaces. |
+| `203_IF_READONLY.ts` | Readonly properties | Immutable interface fields with `readonly`. |
+| `204_IF_READOnly.ts` | Readonly arrays & objects | Deep readonly patterns. |
+
+```typescript
+// 201_IF.ts
+interface User {
+    name: string;
+    age: number;
+    isAdmin?: boolean;
+}
+let u: User = { name: "Sharad", age: 30 };
 ```
 
 ---
@@ -1036,14 +1225,19 @@ A GitHub Actions workflow (`.github/workflows/playwright.yml`) automatically run
 - [x] Chapter 17 — Promises: resolve, reject, chaining, Promise.all, Promise.allSettled
 - [x] Chapter 18 — Async/Await: sequential, parallel, error handling, Playwright patterns
 - [x] Chapter 19 — Playwright Basics: first real E2E test (TTACart checkout flow)
-- [x] Chapter 20 — OOPs Basics: classes, objects, constructors, static, private fields, export/import
+- [x] Chapter 20 — Export / Import: named, default, and aliased imports
+- [x] Chapter 21 — Classes and Objects: constructors, private fields, static members
+- [x] Chapter 22 — Encapsulation: getters, setters, data hiding
+- [x] Chapter 23 — Inheritance: single, multiple, multilevel, hierarchical
+- [x] Chapter 24 — Polymorphism: method overriding
+- [x] Chapter 25 — OOP Interview Questions: hands-on coding exercises
+- [x] Chapter 26 — TypeScript Basics: types, generics, compilation
+- [x] Chapter 27 — TypeScript Interfaces: contracts, readonly, optional
 - [x] Playwright setup with sample tests
 - [x] GitHub Actions CI workflow
 
 ### Coming Soon
 
-- [ ] TypeScript — Type-safe automation code
-- [ ] TypeScript — Type-safe automation code
 - [ ] Advanced Playwright — Page Object Model, fixtures, API testing
 - [ ] AI Agents — Self-healing tests, MCP-driven STLC
 - [ ] Interview Q&A Bank
@@ -1058,11 +1252,13 @@ A GitHub Actions workflow (`.github/workflows/playwright.yml`) automatically run
 node <file.js>                           # Run any chapter file
 ```
 
-### TypeScript (Coming Soon)
+### TypeScript
 
 ```bash
 npx tsc <file.ts>                        # Compile TS -> JS
 npx ts-node <file.ts>                    # Run TS directly
+npx tsc --init                           # Create tsconfig.json
+npx tsc                                  # Compile all TS files in project
 ```
 
 ### Playwright
