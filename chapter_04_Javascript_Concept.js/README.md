@@ -1,31 +1,61 @@
-# 04 Javascript Concept
+# 04 Variables & Functions
 
-Variables & Functions — var, let, const, hoisting, and the Temporal Dead Zone (TDZ)
+Deep dive into variable declarations, function definitions, hoisting, and the Temporal Dead Zone (TDZ).
 
-## Files in this Chapter
+## Concepts
 
-- 09_var_let_const.js
-- 10_function.js
-- 11_var_explained.js
-- 12_let_people_love.js
-- 13_const_explained.js
-- 14_var_functionascope.js
-- 15_let_scope.js
-- 16_Hoisting.js
-- 17_Hoisting_fn.js
-- 18_let_Hoisting.js
-- 19_let_Hoisting_block.js
-- 20_let_const.js
-- 21_Jr_QA.js
+- **var**: Function-scoped variable declaration. Hoisted to the top with an initial value of `undefined`. Can be redeclared.
+- **let**: Block-scoped variable declaration. Hoisted but not initialized (Temporal Dead Zone). Cannot be redeclared in the same scope.
+- **const**: Block-scoped constant declaration. Must be initialized at declaration and cannot be reassigned.
+- **Hoisting**: JavaScript's behavior of moving declarations to the top of their scope before execution.
+- **Temporal Dead Zone (TDZ)**: The period between entering a block and the actual declaration of a `let` or `const` variable, where accessing it throws a ReferenceError.
+- **Scope**: The accessibility of variables. Types include global scope, function scope, and block scope.
+- **Function Declaration**: A named function defined with the `function` keyword. Hoisted completely.
+- **Function Expression**: A function assigned to a variable. Not hoisted.
+- **Shadowing**: When a variable in an inner scope has the same name as one in an outer scope, masking the outer variable.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```javascript
+// var is function-scoped
+function testVar() {
+    if (true) {
+        var x = 10;
+    }
+    console.log(x); // 10 (accessible outside block)
+}
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+// let is block-scoped
+function testLet() {
+    if (true) {
+        let y = 20;
+    }
+    // console.log(y); // Error: y is not defined
+}
+
+// const cannot be reassigned
+const PI = 3.14;
+// PI = 3.15; // Error: Assignment to constant variable
+
+// Hoisting with var
+console.log(a); // undefined (hoisted)
+var a = 5;
+
+// TDZ with let
+// console.log(b); // Error: Cannot access 'b' before initialization
+let b = 10;
+
+// Function declaration (hoisted)
+sayHello(); // Works!
+function sayHello() {
+    console.log("Hello");
+}
+
+// Function expression (not hoisted)
+// sayHi(); // Error: sayHi is not a function
+var sayHi = function() {
+    console.log("Hi");
+};
 ```
 
 ---

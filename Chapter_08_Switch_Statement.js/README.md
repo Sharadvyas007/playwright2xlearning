@@ -1,29 +1,66 @@
-# 08 Switch Statement
+# 08 Switch Statements
 
-Switch Statements — Control flow with switch-case constructs
+Control flow using switch-case constructs.
 
-## Files in this Chapter
+## Concepts
 
-- 59_Switch.js
-- 60_No_Break.js
-- 61_Default.js
-- 62_REAL_TIME_EXAMPLE.js
-- 63_Switch_Group.js
-- 64_IQ_Switch.js
-- 65_IQ2.js
-- 66_IQ3.js
-- 67_IQ4.js
-- Switch_Cases_Test.js
-- task_live_test.js
+- **switch Statement**: Evaluates an expression and executes the case clause that matches the expression's value.
+- **case**: A label within a switch statement that identifies a value to compare against the expression.
+- **break**: Exits the switch statement. Without it, execution "falls through" to the next case.
+- **Fall-through Behavior**: When multiple cases share the same code by omitting `break` between them.
+- **default**: A catch-all clause that executes when no case matches the expression value.
+- **Grouped Cases**: Multiple case labels sharing the same block of code.
+- **switch(true) Pattern**: Using boolean expressions in case labels as an alternative to if-else ladders.
+- **Strict Comparison**: Switch uses strict equality (`===`) for matching, so type matters.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```javascript
+// Basic switch statement
+let day = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("Invalid day");
+}
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+// Fall-through / grouped cases
+let grade = "B";
+switch (grade) {
+    case "A":
+    case "B":
+    case "C":
+        console.log("Passed");
+        break;
+    case "D":
+    case "F":
+        console.log("Failed");
+        break;
+}
+
+// switch with HTTP status codes
+let statusCode = 404;
+switch (statusCode) {
+    case 200:
+        console.log("OK");
+        break;
+    case 404:
+        console.log("Not Found");
+        break;
+    case 500:
+        console.log("Server Error");
+        break;
+    default:
+        console.log("Unknown status");
+}
 ```
 
 ---

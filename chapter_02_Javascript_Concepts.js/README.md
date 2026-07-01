@@ -1,19 +1,30 @@
-# 02 Javascript Concepts
+# 02 JavaScript Concepts
 
-JavaScript Concepts — Variables and basic output
+Introduction to JavaScript variables and basic output.
 
-## Files in this Chapter
+## Concepts
 
-- 05_JS_Basics.js
+- **Variables**: Named containers used to store data values in memory.
+- **var**: The original way to declare variables in JavaScript. Function-scoped and can be redeclared.
+- **Data Types**: JavaScript has primitive types like string, number, boolean, null, undefined, and reference types like objects and arrays.
+- **console.log**: Used to output values, variables, and expressions to the console for debugging and verification.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```javascript
+// Declaring a variable with var
+var name = "Sharad";
+console.log(name); // Sharad
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+// Reassigning a variable
+var age = 25;
+age = 26;
+console.log(age); // 26
+
+// Different data types
+var isActive = true;      // boolean
+var count = 10;           // number
+var message = "Hello";    // string
 ```
 
 ---

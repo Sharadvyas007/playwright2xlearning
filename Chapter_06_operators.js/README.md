@@ -1,36 +1,57 @@
-# 06 operators
+# 06 Operators
 
-Operators — Arithmetic, comparison, logical, ternary, increment/decrement
+JavaScript operators for performing calculations, comparisons, and logical decisions.
 
-## Files in this Chapter
+## Concepts
 
-- 30_operators.js
-- 31_Arithmetic_OP.js
-- 32­_Modulus_OP.js
-- 33_Expo_OP.js
-- 34_iq.JS
-- 35_Comparision_OP.js
-- 36_Comparison__Strict_loose.js
-- 37_IQ__Loose_Strict.js
-- 38_Confusing_Comparison.js
-- 39_Logical_OP.js
-- 40_String_Con_OP.js
-- 41_Ternary_OP.js
-- 42_Type_OP.js
-- 43_Incre_Decre_OP.js
-- 44_Null_OP.js
-- 45_Post_Increment.js
-- 46_IQ_INCREMENT_D.js
-- 47_Advance_ID_.js
+- **Arithmetic Operators**: `+`, `-`, `*`, `/`, `%` (modulus), `**` (exponentiation). Used for mathematical calculations.
+- **Modulus (`%`)**: Returns the remainder of a division. Commonly used to check even/odd numbers.
+- **Comparison Operators**: `>`, `<`, `>=`, `<=`, `==` (loose equality), `===` (strict equality). Compare values and return booleans.
+- **Strict vs Loose Equality**: `===` checks both value and type; `==` performs type coercion before comparison. Always prefer `===`.
+- **Logical Operators**: `&&` (AND), `||` (OR), `!` (NOT). Used to combine or invert boolean expressions.
+- **Ternary Operator**: `condition ? valueIfTrue : valueIfFalse`. A concise way to write simple if-else statements.
+- **Nullish Coalescing (`??`)**: Returns the right-hand operand when the left is `null` or `undefined`.
+- **Increment/Decrement**: `++` and `--` operators. Pre-increment (`++a`) increments before use; post-increment (`a++`) increments after use.
+- **Type Coercion**: JavaScript's automatic conversion of values from one type to another during operations.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```javascript
+// Arithmetic operators
+let sum = 10 + 5;      // 15
+let diff = 10 - 5;     // 5
+let prod = 10 * 5;     // 50
+let div = 10 / 3;      // 3.333...
+let rem = 10 % 3;      // 1 (remainder)
+let pow = 2 ** 3;      // 8 (2 cubed)
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+// Comparison operators
+console.log(5 == "5");   // true (loose equality, type coercion)
+console.log(5 === "5");  // false (strict equality, different types)
+console.log(10 > 5);     // true
+console.log(10 <= 10);   // true
+
+// Logical operators
+let isLoggedIn = true;
+let isAdmin = false;
+console.log(isLoggedIn && isAdmin); // false (both must be true)
+console.log(isLoggedIn || isAdmin); // true (at least one is true)
+console.log(!isLoggedIn);           // false (negation)
+
+// Ternary operator
+let age = 20;
+let status = age >= 18 ? "Adult" : "Minor";
+console.log(status); // Adult
+
+// Nullish coalescing
+let userInput = null;
+let defaultValue = userInput ?? "Default";
+console.log(defaultValue); // Default
+
+// Increment operators
+let count = 5;
+console.log(count++); // 5 (returns first, then increments)
+console.log(++count); // 7 (increments first, then returns)
 ```
 
 ---

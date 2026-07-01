@@ -1,28 +1,67 @@
-# 27 TypeScript Interface
+# 27 TypeScript Interfaces
 
-TypeScript Interfaces — Contracts, optional properties, and readonly modifiers
+Defining contracts with interfaces — optional properties, readonly modifiers, and extension.
 
-## Files in this Chapter
+## Concepts
 
-- 201_IF.ts
-- 202_IF_Part2.ts
-- 203_IF_READONLY.ts
-- 204_IF_READOnly.ts
-- 205_Interface.ts
-- 206_Hooks.ts
-- 207_Bug_REPORT.ts
-- 208_TestConfig.ts
-- 209_REAL_EXAMPLE.ts
-- 210_Class_Interface.ts
+- **Interface**: A TypeScript construct that defines the shape (structure) an object must have. It acts as a contract.
+- **Optional Properties**: Properties marked with `?` are not required when implementing the interface.
+- **Readonly Properties**: Properties marked with `readonly` cannot be reassigned after creation.
+- **Method Signatures**: Interfaces can declare functions that implementing objects must provide.
+- **Interface Inheritance**: Interfaces can extend other interfaces using the `extends` keyword.
+- **Class Implements**: A class can implement an interface, promising to provide all required properties and methods.
+- **Callable Interfaces**: Interfaces that describe functions (call signatures).
+- **Index Signatures**: Allow interfaces to accept additional properties with a specific type pattern.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```typescript
+// Basic interface
+interface User {
+    name: string;
+    age: number;
+    isAdmin?: boolean; // optional
+}
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+let u: User = { name: "Sharad", age: 30 };
+
+// Readonly properties
+interface Point {
+    readonly x: number;
+    readonly y: number;
+}
+let p: Point = { x: 10, y: 20 };
+// p.x = 5; // Error: Cannot assign to 'x'
+
+// Method signatures
+interface Calculator {
+    add(a: number, b: number): number;
+    subtract: (a: number, b: number) => number;
+}
+
+// Interface inheritance
+interface Animal {
+    name: string;
+}
+interface Dog extends Animal {
+    breed: string;
+}
+
+// Class implements interface
+interface Runnable {
+    run(): void;
+}
+class Program implements Runnable {
+    run() {
+        console.log("Program is running");
+    }
+}
+
+// Callable interface
+interface Logger {
+    (message: string): void;
+}
+let log: Logger = (msg) => console.log(msg);
 ```
 
 ---

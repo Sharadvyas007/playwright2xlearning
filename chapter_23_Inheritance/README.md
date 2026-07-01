@@ -1,27 +1,71 @@
 # 23 Inheritance
 
-Inheritance — Single, multiple, multilevel, and hierarchical patterns
+Reusing and extending class behaviour — single, multiple, multilevel, and hierarchical inheritance patterns.
 
-## Files in this Chapter
+## Concepts
 
-- 183_Single_Inheritance.js
-- 184_SI_Example.js
-- 185_Single_Inheritance_Con.js
-- 186_IQ.js
-- 187_IQ2.js
-- 188_REAL_PageObject_Model.js
-- 189_Multiple_Inheritance.js
-- 190_Multiple_Level_Inheritance.js
-- 191_Hierarchial_Inheritance.js
+- **Inheritance**: A mechanism where a new class (child/subclass) derives properties and methods from an existing class (parent/superclass).
+- **extends**: The keyword used to create a subclass that inherits from a parent class.
+- **super()**: Calls the parent class constructor from the child class constructor.
+- **Single Inheritance**: A child class inherits from exactly one parent class.
+- **Multilevel Inheritance**: A class inherits from a child class, forming a grandparent → parent → child chain.
+- **Hierarchical Inheritance**: Multiple child classes inherit from a single parent class.
+- **Method Overriding**: Redefining a parent class method in the child class with different behaviour.
+- **super.method()**: Calling a parent class method from within an overridden child method.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```javascript
+// Single inheritance
+class Animal {
+    speak() {
+        console.log("Animal speaks");
+    }
+}
+class Dog extends Animal {
+    speak() {
+        console.log("Dog barks");
+    }
+}
+let dog = new Dog();
+dog.speak(); // Dog barks
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+// Constructor inheritance with super()
+class Employee {
+    constructor(name) {
+        this.name = name;
+    }
+}
+class Engineer extends Employee {
+    constructor(name, skill) {
+        super(name);
+        this.skill = skill;
+    }
+}
+let eng = new Engineer("Sharad", "QA");
+console.log(eng.name, eng.skill);
+
+// Multilevel inheritance
+class GrandParent {
+    generation() { return "GrandParent"; }
+}
+class Parent extends GrandParent {
+    generation() { return "Parent"; }
+}
+class Child extends Parent {
+    generation() { return "Child"; }
+}
+
+// Hierarchical inheritance
+class Vehicle {
+    move() { console.log("Moving"); }
+}
+class Car extends Vehicle {
+    move() { console.log("Car driving"); }
+}
+class Bike extends Vehicle {
+    move() { console.log("Bike riding"); }
+}
 ```
 
 ---

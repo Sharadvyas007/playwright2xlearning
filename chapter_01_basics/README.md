@@ -1,22 +1,30 @@
-# 01 basics
+# 01 Basics
 
-Basics — Hello World, environment setup, and first JavaScript programs
+Foundational setup and first JavaScript programs.
 
-## Files in this Chapter
+## Concepts
 
-- 01_basic.js
-- 02_JS.js
-- 03_Verify_Setup.js
-- 04_HotCode.js
+- **console.log**: A function used to print output to the console. It is the most basic way to display information in JavaScript.
+- **Node.js**: A JavaScript runtime that allows you to execute JavaScript code outside of a browser.
+- **process.platform / process.arch / process.version**: Built-in Node.js properties that provide information about the operating system, CPU architecture, and Node.js version.
+- **Functions**: Reusable blocks of code that perform a specific task. They can accept inputs (parameters) and return outputs.
+- **Return Statement**: Exits a function and optionally passes a value back to the caller.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```javascript
+// First JavaScript program
+console.log("Hello World");
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+// Function that adds two numbers
+function add(a, b) {
+    return a + b;
+}
+console.log(add(5, 3)); // 8
+
+// Checking Node.js environment
+console.log(process.platform);  // e.g., "win32"
+console.log(process.version);   // e.g., "v18.17.0"
 ```
 
 ---

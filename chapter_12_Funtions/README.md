@@ -1,44 +1,65 @@
-# 12 Funtions
+# 12 Functions
 
-Functions — Declarations, expressions, arrow functions, scope, and closures
+Deep dive into JavaScript functions — declarations, expressions, arrow functions, scope, closures.
 
-## Files in this Chapter
+## Concepts
 
-- 100_Type4_Fn_With_Param_With_Return.js
-- 101_Template_literal.js
-- 102_Fn_Expression.js
-- 103_Arrow_Fn.js
-- 104_Arrow_Fn_REAL.js
-- 105_IIFE.js
-- 106_Default_Param_Fn.js
-- 107_IQ.js
-- 108_Rest_Param_Fn.js
-- 109_IQ.js
-- 110_Spead_IQ.js
-- 111_Scope._Fn.js
-- 112_IQ.js
-- 113_Closure.js
-- 114_Closure.js
-- 115_API_REAL_Closure.js
-- 116_Higher_Order_Fn.js
-- 117_Pure_Fn.js
-- 96_Functions.js
-- 97_Type1_Fn_Basic_Functions.js
-- 98_Type2_Fn_With_Param_No_Return.js
-- 99_Type3_Fn_without_Param_Return_Type.js
-- Arrow_Fun_pratice.js
-- day_2_practice.js
-- fn_practices.js
-- function_practice_obj.js
+- **Function Declaration**: A named function created with the `function` keyword. Hoisted completely.
+- **Function Expression**: A function assigned to a variable. Not hoisted.
+- **Arrow Function**: A concise syntax introduced in ES6. Does not have its own `this`.
+- **Parameters vs Arguments**: Parameters are variables in the function definition; arguments are actual values passed during the call.
+- **Default Parameters**: Predefined values for parameters if no argument is provided.
+- **Rest Parameters (`...`)**: Collects remaining arguments into an array.
+- **IIFE (Immediately Invoked Function Expression)**: A function that runs immediately after being defined.
+- **Scope**: The accessibility of variables — global, function, and block scope.
+- **Closure**: A function that remembers variables from its outer scope even after the outer function has finished executing.
+- **Higher-Order Function**: A function that accepts another function as an argument or returns a function.
+- **Pure Function**: A function that always produces the same output for the same input and has no side effects.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```javascript
+// Function declaration
+function greet(name) {
+    return "Hello, " + name;
+}
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+// Function expression
+const add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+const multiply = (a, b) => a * b;
+
+// Default parameters
+function greetUser(name = "Guest") {
+    console.log("Welcome, " + name);
+}
+
+// Rest parameters
+function sum(...numbers) {
+    return numbers.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3, 4)); // 10
+
+// Closure
+function makeCounter() {
+    let count = 0;
+    return {
+        increment: () => count++,
+        getCount: () => count
+    };
+}
+let counter = makeCounter();
+counter.increment();
+console.log(counter.getCount()); // 1
+
+// Higher-order function
+function operate(a, b, fn) {
+    return fn(a, b);
+}
+console.log(operate(5, 3, (x, y) => x - y)); // 2
 ```
 
 ---

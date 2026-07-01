@@ -1,19 +1,47 @@
 # 24 Polymorphism
 
-Polymorphism — Runtime polymorphism through method overriding
+Runtime polymorphism through method overriding.
 
-## Files in this Chapter
+## Concepts
 
-- 192_Method_Overriding.js
+- **Polymorphism**: The ability of different objects to respond to the same method call in different ways. Literally means "many forms."
+- **Method Overriding**: Redefining a parent class method in a child class to provide specialized behaviour.
+- **Runtime Polymorphism**: The decision about which method to execute is made at runtime based on the actual object's class.
+- **Parent Reference / Child Object**: A parent class reference can point to a child class object, and the overridden method of the child is called.
 
-## How to Run
+## Examples
 
-```bash
-# Run any JavaScript file
-node <filename>
+```javascript
+// Method overriding
+class Browser {
+    launch() {
+        console.log("Launching generic browser");
+    }
+}
+class Chrome extends Browser {
+    launch() {
+        console.log("Launching Chrome");
+    }
+}
+class Firefox extends Browser {
+    launch() {
+        console.log("Launching Firefox");
+    }
+}
 
-# Run any TypeScript file (if applicable)
-npx ts-node <filename>
+// Runtime polymorphism
+let browsers = [new Chrome(), new Firefox(), new Browser()];
+for (let browser of browsers) {
+    browser.launch();
+}
+// Output:
+// Launching Chrome
+// Launching Firefox
+// Launching generic browser
+
+// Parent reference with child object
+let myBrowser = new Chrome();
+myBrowser.launch(); // Launching Chrome
 ```
 
 ---
