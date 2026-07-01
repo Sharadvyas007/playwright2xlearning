@@ -8,6 +8,12 @@ TypeScript Interfaces — Contracts, optional properties, and readonly modifiers
 - 202_IF_Part2.ts
 - 203_IF_READONLY.ts
 - 204_IF_READOnly.ts
+- 205_Interface.ts
+- 206_Hooks.ts
+- 207_Bug_REPORT.ts
+- 208_TestConfig.ts
+- 209_REAL_EXAMPLE.ts
+- 210_Class_Interface.ts
 
 ## How to Run
 

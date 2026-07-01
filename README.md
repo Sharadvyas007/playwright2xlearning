@@ -306,7 +306,13 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 201_IF.ts
 │   ├── 202_IF_Part2.ts
 │   ├── 203_IF_READONLY.ts
-│   └── 204_IF_READOnly.ts
+│   ├── 204_IF_READOnly.ts
+│   ├── 205_Interface.ts
+│   ├── 206_Hooks.ts
+│   ├── 207_Bug_REPORT.ts
+│   ├── 208_TestConfig.ts
+│   ├── 209_REAL_EXAMPLE.ts
+│   └── 210_Class_Interface.ts
 ├── tsconfig.json                         # TypeScript compiler configuration
 ├── package.json                          # Project manifest
 ├── package-lock.json                     # Locked dependencies
@@ -1137,6 +1143,12 @@ Defining contracts with interfaces — optional properties, readonly modifiers, 
 | `202_IF_Part2.ts` | Optional & nested properties | `?` for optional fields and nested interfaces. |
 | `203_IF_READONLY.ts` | Readonly properties | Immutable interface fields with `readonly`. |
 | `204_IF_READOnly.ts` | Readonly arrays & objects | Deep readonly patterns. |
+| `205_Interface.ts` | Method signatures in interfaces | Function declarations and arrow-function syntax inside interfaces. |
+| `206_Hooks.ts` | Callable interfaces & test hooks | Function-type interfaces for `beforeEach`/`afterEach` patterns. |
+| `207_Bug_REPORT.ts` | Interface for bug reports | Structuring bug-report data with typed arrays. |
+| `208_TestConfig.ts` | Optional config fields | Playwright-style config objects with optional `timeout` and `retries`. |
+| `209_REAL_EXAMPLE.ts` | Interface inheritance | Extending base interfaces for Page Object Model shapes. |
+| `210_Class_Interface.ts` | Class implements interface | Enforcing contracts on classes with `implements`. |
 
 ```typescript
 // 201_IF.ts
