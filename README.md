@@ -23,6 +23,9 @@ A collection of **Playwright** and **JavaScript** concept exercises for learning
 - [Chapter 27 — TypeScript Interfaces](#chapter-27--typescript-interfaces)
 - [Chapter 28 — Enums](#chapter-28--enums)
 - [Chapter 29 — TypeScript Generics & Access Modifiers](#chapter-29--typescript-generics--access-modifiers)
+- [Chapter 30 — Private, Public, Protected](#chapter-30--private-public-protected)
+- [Chapter 31 — Type Override & Decorators](#chapter-31--type-override--decorators)
+- [Chapter 32 — Playwright Fundamentals](#chapter-32--playwright-fundamentals)
 - [Playwright Testing](#playwright-testing)
 - [CI / CD](#ci--cd)
 - [Roadmap](#roadmap)
@@ -328,6 +331,22 @@ This repository is a structured learning path covering JavaScript fundamentals �
 │   ├── 219_PageObjectModel.ts
 │   ├── 220_READONLY.ts
 │   └── 221_Abstract_Class.ts
+├── chapter_30_PRIVATE_PUBLIC_PROTECTED/  # Access modifiers reorganized
+│   ├── 218_PPP.ts
+│   ├── 219_PageObjectModel.ts
+│   ├── 220_READONLY.ts
+│   └── 221_Abstract_Class.ts
+├── chapter_31_Type_Overide_Decortors/    # Type assertions, override, decorators
+│   ├── 222_Type_As.ts
+│   ├── 223_Type_Alias_As.ts
+│   ├── 224_Override.ts
+│   ├── 225_IQ.ts
+│   ├── 226_Decorator.ts
+│   ├── 227_Decortors_2.ts
+│   ├── 228_Multiple_Decor.ts
+│   └── tsconfig.json
+├── chapter_32_Playwright_Fundamentals/   # Playwright test fundamentals
+│   └── example.spec.ts
 ├── tsconfig.json                         # TypeScript compiler configuration
 ├── package.json                          # Project manifest
 ├── package-lock.json                     # Locked dependencies
@@ -1254,6 +1273,83 @@ class UITest extends BaseTest {
 
 ---
 
+### Chapter 30 — Private, Public, Protected
+
+Reorganized deep dive into TypeScript access modifiers — `public`, `private`, `protected`, `readonly`, and abstract classes.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `218_PPP.ts` | `public`, `private`, `protected` | `APIClient` class demonstrating all three modifier levels with subclass access. |
+| `219_PageObjectModel.ts` | `protected` in POM | `BasePage` with `protected navigate()` extended by `LoginPage`. |
+| `220_READONLY.ts` | `readonly` properties | Immutable config fields initialized via constructor. |
+| `221_Abstract_Class.ts` | Abstract classes & methods | `BaseTest` abstract class enforcing `setup`, `execute`, `teardown` contracts. |
+
+---
+
+### Chapter 31 — Type Override & Decorators
+
+Type assertions, method overriding, and decorators in TypeScript.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `222_Type_As.ts` | Type assertion (`as`) | Casting `unknown` objects to typed interfaces. |
+| `223_Type_Alias_As.ts` | Type aliases | Creating reusable type definitions with `type`. |
+| `224_Override.ts` | `override` keyword | `BaseTest` overridden by `LoginTest` and `APITest`. |
+| `225_IQ.ts` | Override interview questions | Father/child class override patterns. |
+| `226_Decorator.ts` | Class decorators | `@Log` decorator wrapping `Calculator.add()`. |
+| `227_Decortors_2.ts` | Decorators part 2 | Advanced decorator patterns. |
+| `228_Multiple_Decor.ts` | Multiple decorators | Stacking `@beforeSomething` and `@BeforeSomeSomeThing` on `Dog.bark()`. |
+
+```typescript
+// 222_Type_As.ts — Type assertion
+let element: unknown = { tagName: "Button", textContent: "Submit", id: "submit-btn", disabled: false };
+interface elementI { tagName: string; textContent: string; id: string; disabled: boolean; }
+let button = element as elementI;
+console.log("Tag:", button.tagName);
+```
+
+```typescript
+// 226_Decorator.ts — Method decorator
+function Log(target: any, methodName: string, descriptor: PropertyDescriptor) {
+    const original = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+        console.log(`Called ${methodName} with args:`, args);
+        return original.apply(this, args);
+    };
+}
+class Calculator {
+    @Log
+    add(a: number, b: number): number { return a + b; }
+}
+new Calculator().add(2, 3);
+// Called add with args: [2, 3]
+```
+
+---
+
+### Chapter 32 — Playwright Fundamentals
+
+Getting started with Playwright test syntax — navigating pages and asserting page state.
+
+| File | Topics | Description |
+|------|--------|-------------|
+| `example.spec.ts` | Playwright test basics | Navigate to TTACart and verify page title. |
+
+```typescript
+// example.spec.ts
+import { test, expect } from '@playwright/test';
+test('Verify the title of the TTA Cart', async ({ page }) => {
+    await page.goto("https://app.thetestingacademy.com/playwright/ttacart/");
+    await expect(page).toHaveTitle("TTACart - Login");
+});
+```
+
+```bash
+npx playwright test example.spec.ts
+```
+
+---
+
 ## Playwright Testing
 
 This repository includes a full **Playwright** setup for end-to-end browser automation.
@@ -1350,6 +1446,9 @@ A GitHub Actions workflow (`.github/workflows/playwright.yml`) automatically run
 - [x] Chapter 27 — TypeScript Interfaces: contracts, readonly, optional
 - [x] Chapter 28 — Enums: string enums, severity levels, browser launch, HTTP methods
 - [x] Chapter 29 — TypeScript Generics & Access Modifiers: generics, public/private/protected, readonly, abstract classes
+- [x] Chapter 30 — Private, Public, Protected: access modifier deep dive with POM and abstract classes
+- [x] Chapter 31 — Type Override & Decorators: type assertions, override keyword, and decorators
+- [x] Chapter 32 — Playwright Fundamentals: basic Playwright test syntax and page navigation
 - [x] Playwright setup with sample tests
 - [x] GitHub Actions CI workflow
 
